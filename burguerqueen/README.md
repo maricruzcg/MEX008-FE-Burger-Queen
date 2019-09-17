@@ -27,4 +27,4 @@ El sistema le permite ingresar todas las opciones de su menú, tanto comida como
 
 Una vez que la orden está lista se manda a cocina y ahí se imprime la comanda, en caso de que la orden incluya productos de diferentes estaciones se imprime las veces que sean necesarias.
 
-![izettle](img/izettle1.png)
+![izettle](img/izettleok.png)

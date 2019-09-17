@@ -6,8 +6,8 @@ Nos contactó una cadena de comida rápida vegana (Pan D’monium, ubicado en Av
 
 Para conocer cómo se realizan los pedidos y las necesidades del personal para la atención de los comensales, acudimos a las instalaciones de Pan D'monium. Fuimos atendidas por Aurora, dueña del negocio, quien nos explicó las estaciones en que se divide el negocio. Nos habló de las dificultades para utilizar el software y las repercusiones en su trabajo.
 
-![estaciones1](img/estaciones11.png)
-![estaciones2](img/estaciones22.png)
+![estaciones1](MEX008-FE-Burger-Queen/img/estaciones11.png)
+![estaciones2](MEX008-FE-Burger-Queen/img/estaciones22.png)
 
 En Pan D'monium trabajan 5 personas trabajan en este local establecido, todas mayormente en la cocina, por lo que cuando entran comensales, una de ellas tiene que parar lo que está haciendo para ir a atender las mesas, para regresar con el pedido y seguir preparando la comida. No hay una persona enteramente dedicada a meserear. Descubrimos que tienen promoción de pizzas al 2x1 para los días miércoles y que tienen muchas visitas ese día de la semana.
 
@@ -15,7 +15,7 @@ El menú de Pan D'moium ofrece 6 tipos de hamburguesas, 6 diferentes pizzas, con
 
 ## Entrevista con Aurora
 
-![aurora](img/aurora1.png)
+![aurora](MEX008-FE-Burger-Queen/img/aurora1.png)
 
 #Entendimiento del problema
 
@@ -27,4 +27,4 @@ El sistema le permite ingresar todas las opciones de su menú, tanto comida como
 
 Una vez que la orden está lista se manda a cocina y ahí se imprime la comanda, en caso de que la orden incluya productos de diferentes estaciones se imprime las veces que sean necesarias.
 
-![izettle](img/izettleok.png)
+![izettle](MEX008-FE-Burger-Queen/img/izettleok.png)

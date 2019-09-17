@@ -5,7 +5,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <Header info='"Hola laboratoria ya imprimimos!!"' dato='Hola mundo cruel!!'/>
+      <Header info='Esto será la navbar.' dato='Ambos textos se enviaron cómo props desde el padre app.js.'/>
     </div>
   );
 }

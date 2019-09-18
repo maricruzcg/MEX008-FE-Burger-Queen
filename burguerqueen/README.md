@@ -29,6 +29,21 @@ Una vez que la orden está lista se manda a cocina y ahí se imprime la comanda,
 
 ![izettle](MEX008-FE-Burger-Queen/burguerqueen/img/izettleok.png)
 
+# Ideación
+
+[Prototipo](https://www.figma.com/proto/qb7wqGipGcKK4CfeXtoUAj/Burger-Queen?node-id=0%3A1&scaling=scale-down)
+
+Decidimos enfocarnos en el servicio al cliente, en el rol de la mesera y su interacción con los comensales. Para Aurora este punto es fundamental para su negocio porque este trato personalizado le creó clientes leales y frecuentes, que en este momento le comentan ya no se sienten tan acogidos y es algo que a ella le gustaría cambiar.
+
+Por otro lado una mejora en el servicio de las meseras, supondría mayores propinas para todas, y es otro de los objetivos que se quiere alcanzar, una mayor entrada de dinero a partir de una mejora del servicio.
+
+Para solucionar estos puntos, decidimos incluir en la primera pantalla que ve la mesera, tres recomendaciones que puede hacerle a los comensales estas se podrán modificar desde la cuenta de Administradora a la cual tendrán acceso solamente las stakeholders. 
+
+Estas recomendaciones estarán ligadas al historial de ventas para que las stakeholders puedan reconocer que productos quizá no esté teniendo tantas ventas o sea nuevo para los comensales.
+
+En la pantalla se tendrá a la vista, todo el tiempo, el menú y la orden que se está modificando, así como las órdenes abiertas que ya se han mandado a cocina.
+
+![pantallas](MEX008-FE-Burger-Queen/burguerqueen/img/pantallas.png)
 
 
 

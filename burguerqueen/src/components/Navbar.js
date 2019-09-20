@@ -8,7 +8,8 @@ class Navbar extends React.Component {
     render() {
         return (<nav className={"navbar navbar-light bg-light"}>
                 <a className={"navbar-brand"} href="#">
-                    <img src="/docs/4.3/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="pandemonium"/>
+                <button type="button" className={"btn btn-dark"}>Ir a admisnistración</button>
+
                 </a>    
             </nav>)
             }

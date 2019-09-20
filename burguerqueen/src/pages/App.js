@@ -8,21 +8,22 @@ import Home from '../components/home'
 import Nav from "../components/Navbar"
 import Username from "../components/Username"
 import './App.css';
+import Background from '../components/Background';
 
 class App extends Component {
-  render () {
+  render() {
     return (
       <div>
         <BrowserRouter>
-        <div>
-          <Nav />
-          <Route exact path="/" component={Home} />
-          <Route path="/agregar" component={Agregar} />
-        </div>
+          <div>
+            <Background />
+            <Nav />
+            <Route exact path="/" component={Home} />
+            <Route path="/agregar" component={Agregar} />
+          </div>
         </BrowserRouter>
-        <Username/>
+        <Username />
       </div>
-       
     );
   }
 }

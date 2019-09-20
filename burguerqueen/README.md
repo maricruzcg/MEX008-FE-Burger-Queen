@@ -43,4 +43,4 @@ Estas recomendaciones estarán ligadas al historial de ventas para que las stake
 
 En la pantalla se tendrá a la vista, todo el tiempo, el menú y la orden que se está modificando, así como las órdenes abiertas que ya se han mandado a cocina.
 
-![pantallas](MEX008-FE-Burger-Queen/burguerqueen/img/pantallas.png)
+![pantallas](https://github.com/VianeyLaraRangel/MEX008-FE-Burger-Queen/blob/master/burguerqueen/img/pantallas1.png)

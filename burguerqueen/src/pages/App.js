@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom'
 import Home from '../components/Home'
 import Menu from '../components/Menu'
-import Nav from "../components/Navbar"
 import './App.css';
 
 

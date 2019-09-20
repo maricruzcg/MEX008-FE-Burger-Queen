@@ -9,4 +9,17 @@ class Background extends React.Component {
     }
 };
 
+//class Background extends React.Component {
+  //  getStyle = () => {
+       // return {
+         //   backgroundImage: `url(${Image})`
+        //}
+    //}
+    //render() {
+    //    return (
+    //        <img src={Image} />
+    //    )
+   // }
+//};
+
 export default Background;

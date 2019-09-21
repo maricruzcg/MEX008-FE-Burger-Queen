@@ -1,5 +1,7 @@
 import React from 'react';
-import { NavLink, withRouter } from 'react-router-dom'
+import Btn from "./Btn";
+
+// import { NavLink, withRouter } from 'react-router-dom'
 
 class Navbar extends React.Component {
     // getNavLinkClass = (path) => {
@@ -7,12 +9,10 @@ class Navbar extends React.Component {
     // }
     render() {
         return (<nav className={"navbar navbar-light bg-light"}>
-            <a className={"navbar-brand"} href="#">
-                <button type="button" className={"btn btn-dark"}>Ir a administración</button>
-            </a>
+            <Btn type="button" text="Ir a administración"/>
         </nav>)
     }
 };
 
-Navbar = withRouter(Navbar);
+// Navbar = withRouter(Navbar);
 export default Navbar;

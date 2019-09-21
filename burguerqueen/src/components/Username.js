@@ -1,4 +1,6 @@
 import React from 'react';
+import Btn from "./Btn";
+
 
 class Username extends React.Component {
     render() {
@@ -8,9 +10,8 @@ class Username extends React.Component {
         </div>
         <input type="text" aria-label="First name" className={"form-control"}/>
         <input type="text" aria-label="Last name" className={"form-control"}/>
-        <a href="/Menu">
-        <button type="submit" className={"btn btn-dark"}>Guardar</button>
-        </a>
+        <Btn href="/Menu" type="submit" text="Guardar"/>
+
       </div>)
             }
         };

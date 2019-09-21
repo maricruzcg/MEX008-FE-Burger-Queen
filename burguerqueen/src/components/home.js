@@ -1,5 +1,5 @@
 import React from 'react';
 
 export default () => {
-    return <div>home</div>
+    return <section className={"burguer"}>home</section>
 };

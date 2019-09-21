@@ -9,6 +9,8 @@ class Background extends React.Component {
     }
 };
 
+export default Background;
+
 //class Background extends React.Component {
   //  getStyle = () => {
        // return {
@@ -21,5 +23,8 @@ class Background extends React.Component {
     //    )
    // }
 //};
+<<<<<<< HEAD
 
 export default Background;
+=======
+>>>>>>> upstream/master

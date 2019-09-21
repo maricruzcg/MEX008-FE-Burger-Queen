@@ -1,15 +1,9 @@
-// import React from 'react';
-// import Header from './components/header'
-
 import React, { Component } from 'react';
-import { BrowserRouter, Route } from 'react-router-dom'
-import Agregar from '../components/agregar'
-import Home from '../components/home'
-import Nav from "../components/Navbar"
-import Username from "../components/Username"
+import { BrowserRouter, Route } from 'react-router-dom';
+import Home from '../components/Home';
+import Menu from '../components/Menu';
 import './App.css';
-//import Background from '../components/Background';
-import Tips from "../components/Tips"
+
 
 class App extends Component {
   render() {
@@ -17,13 +11,10 @@ class App extends Component {
       <div>
         <BrowserRouter>
           <div>
-            <Nav />
-            <Route exact path="/" component={Home} />
-            <Route path="/agregar" component={Agregar} />
+            <Route path="/Home" component={Home} />
+            <Route path="/Menu" component={Menu} />
           </div>
         </BrowserRouter>
-        <Username />
-        <Tips/>
       </div>
     );
   }

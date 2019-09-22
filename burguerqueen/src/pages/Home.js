@@ -5,11 +5,13 @@ import Username from "../components/Username";
 //Se importan los componentes: 1) Boxtip 2)Boxmenu 3)Btn 4) tips 
 const Home = () => {
     return (
-        <div>
+        <section className={"burguer"}>
+            <div className={"overlay"}>
             <Nav />
             <Username />
             <Tips />
-        </div>
+            </div>
+        </section>
     );
 }
 

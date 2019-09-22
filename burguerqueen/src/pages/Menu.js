@@ -4,10 +4,12 @@ import Boxfinish from "../components/Boxfinish"
 
 const Menu = () => {
     return (
-        <div>
+        <section className={"burguer"}>
+            <div className={"overlay"}>
             <Nav />
             <Boxfinish />
-        </div>
+            </div>
+        </section>
     );
 }
 

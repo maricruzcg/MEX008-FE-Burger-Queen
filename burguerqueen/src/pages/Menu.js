@@ -12,7 +12,7 @@ const Menu = () => {
             <div className={"overlay"}>
             <Nav />
             <Boxfinish />
-            <Dropdown />
+            <Dropdown icon={Food} />
             </div>
         </section>
     );

@@ -7,13 +7,15 @@ import Food from "../imgFED/plate.png"
 
 const Menu = () => {
     return (
-        <div>
+        <section className={"burguer"}>
+            <div className={"overlay"}>
             <Nav />
             <Btn type="submit" class="menu-icon plate" text="Comida" />
             <Btn type="submit" class="menu-icon" text="Bebidas" />
             <Btn type="submit" class="menu-icon" text="Postres" />
             <Boxfinish />
-        </div>
+            </div>
+        </section>
     );
 }
 

@@ -1,5 +1,6 @@
 import React from 'react';
-import { ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import { ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem, CardImg } from 'reactstrap';
+
 
 export default class Example extends React.Component {
   constructor(props) {
@@ -21,11 +22,10 @@ export default class Example extends React.Component {
     return (
       <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
         <DropdownToggle caret>
+            <CardImg bottom width="100%" src={this.props.icon} alt={this.props.alt}/>
           Button Dropdown
         </DropdownToggle>
         <DropdownMenu>
-          <DropdownItem header>Header</DropdownItem>
-          <DropdownItem disabled>Action</DropdownItem>
           <DropdownItem>Another Action</DropdownItem>
           <DropdownItem divider />
           <DropdownItem>Another Action</DropdownItem>

@@ -9,9 +9,9 @@ class Username extends React.Component {
         <div className={"input-group-prepend"}>
           <span className={"input-group-text"}>Nombre</span>
         </div>
-        <input type="text" aria-label="First name" className={"form-control"} />
-        <input type="text" aria-label="Last name" className={"form-control"} />
-        <Btn href="/Menu" type="submit" text="Guardar" />
+        <input type="text" aria-label="First name" className={"form-control"}/>
+        <input type="text" aria-label="Last name" className={"form-control"}/>
+        <Btn class="btn btn-dark" href="/Menu" type="submit" text="Guardar"/>
 
       </div>
     );

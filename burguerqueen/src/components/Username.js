@@ -10,8 +10,7 @@ class Username extends React.Component {
         </div>
         <input type="text" aria-label="First name" className={"form-control"}/>
         <input type="text" aria-label="Last name" className={"form-control"}/>
-        <Btn href="/Menu" type="submit" text="Guardar"/>
-
+        <Btn href="/Menu" className={"btn btn-dark"} type="submit"  text="Guardar"/>
       </div>)
             }
         };

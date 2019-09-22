@@ -11,8 +11,11 @@ class Boxfinish extends React.Component {
                         <li className="list-group-item">Primer item</li>
                     </ul>
                 </div>
-                <div class="card-footer text-muted">
-                    <button class="btn btn-dark">
+          
+
+                <div className="card-footer text-muted">
+                    <button className="btn btn-dark">
+
                         FINALIZAR
                     </button>
                 </div>

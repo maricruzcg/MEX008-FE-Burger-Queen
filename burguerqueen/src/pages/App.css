@@ -1,50 +1,19 @@
-.App-header{
-  background-color: 162, 162, 162, 0.65;
-  position: absolute;
-  width: 1024px;
-  height: 69px;
-  left: 0px;
-  top: 0px;
+.card {
+    position: absolute;
+    width: 25rem;
+    height: 35rem;
+    left: 50rem;
+    top: .5rem;
+    background: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.85;
+    border-radius: 10px;
 }
 
-.Menu-icon {
-  /* position: absolute;
-  left: 0%;
-  right: 0%;
-  top: 0%;
-  bottom: 0%;
-  background: #575757; */
-/* vertical sheet */
-  /* box-shadow: 0px 9px 18px rgba(0, 0, 0, 0.18), 0px 6px 5px rgba(0, 0, 0, 0.24);
-  border-radius: 20px; */
-  background-color: aqua;
+.menu-header{
+    width: 20rem;
+    margin-right: 5rem;
+    margin-left: 5rem;
 }
-
-
-
-
-/* .App {
-  text-align: center;
-}
-
-.App-logo {
-   height: 20vmin;
-}
-
-.App-header {
-  background-color: white;
-  max-height: 50vh;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  font-size: calc(10px + 2vmin);
-  color: black;
-  margin-top: 0;
-}
-
-.App-link {
-  color: #61dafb;
-} */
 
 

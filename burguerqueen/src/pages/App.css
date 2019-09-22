@@ -1,20 +1,60 @@
-.large {
-    width: 100%;
+section{
+    height: 100vh;
 }
 
-.btn:hover {
-    background-color: #F08F58;
+.burguer{
+    background-image: url(../imgFED/imagebackground.png);  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
 }
+
+.overlay {
+    /*position: fixed;  Sit on top of the page content */
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.5);
+    /*   z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+}
+
+.nav-dark {
+    background-color: rgba(162, 162, 162, 0.65)!important;
+}
+
+.btn-dark:hover {
+    background-color: #F08F58 !important;
+    border-color: #F08F58 !important;
+}
+
+.double {
+    width: 90%;
+}
+
 
 .card {
- /*   position: absolute;*/
- float: right;
-    width: 25rem;
+    float: right;
+    width: 22rem;
     height: 35rem;
-/*     left: 50rem;
-    top: .5rem; */
+    margin-right: 2rem;
+    margin-top: 3rem;
     background: #FFFFFF;
     mix-blend-mode: normal;
     opacity: 0.85;
     border-radius: 10px;
 }
+
+.card-body {
+    background-color: white;
+}
+
+.footer-dark {
+    background-color: #121416a9!important;
+}
+
+.finish-dark {
+    color: #fff !important;
+    background-color: #191c1f !important;
+    border-color: #191c1f !important;
+}
+
+

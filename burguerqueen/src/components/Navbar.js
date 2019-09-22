@@ -3,8 +3,8 @@ import Btn from "./Btn";
 
 class Navbar extends React.Component {
     render() {
-        return (<nav className={"navbar navbar-light bg-light"}>
-            <Btn type="button" class="large btn btn-dark" text="Ir a administración"/>
+        return (<nav className={"navbar nav-dark"}>
+            <Btn type="button" class="btn btn-dark double" text="IR A ADMINISTRACIÓN"/>
         </nav>)
     }
 };

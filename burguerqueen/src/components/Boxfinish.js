@@ -6,10 +6,12 @@ class Boxfinish extends React.Component {
         return (
             <div className={"card bg-light"} >
                 <Btn text="ORDEN" className="menu-header" />
-                <ul className="list-group list-group-flush">
-                    <li className="list-group-item">Primer item</li>
-                </ul>
                 <div className="card-body">
+                    <ul className="list-group list-group-flush">
+                        <li className="list-group-item">Primer item</li>
+                    </ul>
+                </div>
+                <div class="card-footer text-muted">
                     <button className="btn btn-dark">
                         FINALIZAR
                     </button>

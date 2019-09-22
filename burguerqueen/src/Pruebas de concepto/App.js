@@ -11,3 +11,7 @@ function App() {
 }
 
 export default App;
+
+// getNavLinkClass = (path) => {
+    //     return this.props.location.pathname === path ? 'active' : '';
+    // }

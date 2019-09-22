@@ -57,6 +57,12 @@ section{
     border-color: #191c1f !important;
 }
 
+.finish-dark:hover {
+    background-color: #F08F58 !important;
+    border-color: #F08F58 !important;
+}
+
+
 .menu-icon {
     background: #575757;
     width: 144px;

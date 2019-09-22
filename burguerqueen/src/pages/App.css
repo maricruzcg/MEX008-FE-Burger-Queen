@@ -1,3 +1,9 @@
+.large {
+    width: 100%;
+}
 
+.btn:hover {
+    background-color: #F08F58;
+}
 
 

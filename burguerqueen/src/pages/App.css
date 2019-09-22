@@ -4,12 +4,15 @@
 
 .btn:hover {
     background-color: #F08F58;
+}
+
 .card {
-    position: absolute;
+ /*   position: absolute;*/
+ float: right;
     width: 25rem;
     height: 35rem;
-    left: 50rem;
-    top: .5rem;
+/*     left: 50rem;
+    top: .5rem; */
     background: #FFFFFF;
     mix-blend-mode: normal;
     opacity: 0.85;

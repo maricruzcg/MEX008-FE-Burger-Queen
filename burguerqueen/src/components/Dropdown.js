@@ -20,15 +20,14 @@ export default class Example extends React.Component {
 
   render() {
     return (
-      <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
+      <ButtonDropdown className={"menu-icon"} isOpen={this.state.dropdownOpen} toggle={this.toggle}>
         <DropdownToggle caret>
-            <CardImg bottom width="100%" src={this.props.icon} alt={this.props.alt}/>
-          Button Dropdown
+            <CardImg bottom width="87px" height="87px" src={this.props.icon} alt={this.props.alt}/>
+              <p>{this.props.text}</p>
         </DropdownToggle>
         <DropdownMenu>
-          <DropdownItem>Another Action</DropdownItem>
-          <DropdownItem divider />
-          <DropdownItem>Another Action</DropdownItem>
+          <DropdownItem>Ensalada</DropdownItem>
+          <DropdownItem>Pizzas</DropdownItem>
         </DropdownMenu>
       </ButtonDropdown>
     );

@@ -11,7 +11,7 @@ const Menu = () => {
             <div className={"overlay"}>
             <Nav />
             <Boxfinish />
-            <Dropdown icon={Food} />
+            <Dropdown icon={Food} text="COMIDA" alt="plato" />
             </div>
         </section>
     );

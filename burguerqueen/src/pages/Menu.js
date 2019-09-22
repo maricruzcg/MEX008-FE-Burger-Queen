@@ -1,9 +1,7 @@
 import React from 'react';
 import Nav from "../components/Navbar"
 import Boxfinish from "../components/Boxfinish"
-import Btn from "../components/Btn"
 import Dropdown from "../components/Dropdown"
-
 import Food from "../imgFED/plate.png"
 
 const Menu = () => {
@@ -12,7 +10,7 @@ const Menu = () => {
             <div className={"overlay"}>
             <Nav />
             <Boxfinish />
-            <Dropdown />
+            <Dropdown/>
             </div>
         </section>
     );

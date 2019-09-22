@@ -2,6 +2,7 @@ import React from 'react';
 import Nav from "../components/Navbar"
 import Boxfinish from "../components/Boxfinish"
 import Btn from "../components/Btn"
+import Dropdown from "../components/Dropdown"
 
 import Food from "../imgFED/plate.png"
 
@@ -10,10 +11,8 @@ const Menu = () => {
         <section className={"burguer"}>
             <div className={"overlay"}>
             <Nav />
-            <Btn type="submit" class="menu-icon plate" text="Comida" />
-            <Btn type="submit" class="menu-icon" text="Bebidas" />
-            <Btn type="submit" class="menu-icon" text="Postres" />
             <Boxfinish />
+            <Dropdown />
             </div>
         </section>
     );

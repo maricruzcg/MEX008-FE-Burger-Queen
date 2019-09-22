@@ -3,7 +3,7 @@ import Nav from "../components/Navbar"
 import Boxfinish from "../components/Boxfinish"
 import Dropdown from "../components/Dropdown"
 
-import Food from "../imgFED/platePrueba.png"
+import Food from "../imgFED/plate.png"
 
 const Menu = () => {
     return (
@@ -11,7 +11,7 @@ const Menu = () => {
             <div className={"overlay"}>
             <Nav />
             <Boxfinish />
-            <Dropdown icon={Food} />
+            <Dropdown className={"card-img-bottom"} icon={Food} />
             </div>
         </section>
     );

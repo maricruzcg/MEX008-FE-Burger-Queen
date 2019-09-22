@@ -22,7 +22,7 @@ export default class Example extends React.Component {
     return (
       <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
         <DropdownToggle caret>
-            <CardImg bottom width="100%" src={this.props.icon} alt={this.props.alt}/>
+            <CardImg bottom width="100%" src={this.props.icon} alt={this.props.alt} />
           Button Dropdown
         </DropdownToggle>
         <DropdownMenu>

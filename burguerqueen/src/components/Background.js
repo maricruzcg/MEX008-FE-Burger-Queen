@@ -23,8 +23,5 @@ export default Background;
     //    )
    // }
 //};
-<<<<<<< HEAD
 
 export default Background;
-=======
->>>>>>> upstream/master

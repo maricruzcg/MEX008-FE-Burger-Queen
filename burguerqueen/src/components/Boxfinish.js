@@ -12,7 +12,6 @@ class Boxfinish extends React.Component {
                     </ul>
                 </div>
           
-
                 <div className="card-footer text-muted d-flex justify-content-center footer-dark">
                 <Btn text="FINALIZAR" class="btn finish-dark" />
                 </div>

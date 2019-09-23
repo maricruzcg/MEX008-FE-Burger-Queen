@@ -59,8 +59,8 @@ border-radius: 1.25rem !important;
 }
 
 .dropdown-item:hover {
-    box-shadow: 0px 9px 18px rgba(0, 0, 0, 0.18), 0px 6px 5px rgba(0, 0, 0, 0.24);
-    border-radius: 1.25rem;
+/*     box-shadow: 0px 9px 18px rgba(0, 0, 0, 0.18), 0px 6px 5px rgba(0, 0, 0, 0.24);*/    
+        border-radius: 1.25rem;
 }
 
 .double {
@@ -110,9 +110,7 @@ border-radius: 1.25rem !important;
 }
 
 .box-one{
-    background: #E6E6E6;
-    
-   
+    background: #E6E6E6;  
 }
 
 .box-two{
@@ -132,8 +130,6 @@ border-radius: 1.25rem !important;
 
 }
 
-
-
 .modal-footer {
     justify-content: center !important;
 }
@@ -149,4 +145,9 @@ border-radius: 1.25rem !important;
     font-size: 1.5rem !important;
     border-radius: .8rem !important;
     width: 123% !important;
+}
+
+.extras {
+    margin-top: 1.8rem;
+    margin-right: .7rem;
 }

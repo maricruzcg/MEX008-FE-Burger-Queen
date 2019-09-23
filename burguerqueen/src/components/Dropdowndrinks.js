@@ -22,7 +22,7 @@ export default class Example extends React.Component {
       return (
         <ButtonDropdown className={"menu-icon"} isOpen={this.state.dropdownOpen} toggle={this.toggle}>
           <DropdownToggle caret>
-              <Btn text="MALTEADAS" className="btn btn-secondary" />
+              <Btn text="MALTEADAS" class="btn btn-secondary" />
           </DropdownToggle>
           <DropdownMenu>
             <DropdownItem><Btn text="FRESA" className="btn btn-secondary" /></DropdownItem>

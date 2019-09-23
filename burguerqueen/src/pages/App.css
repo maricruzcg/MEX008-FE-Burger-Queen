@@ -40,6 +40,10 @@ btn {
     border-color: #F08F58 !important;
 }
 
+/* .btn-drinks {
+    max-height: 1rem;
+    font-weight: 900;
+} */
 .dropdown-menu.show {
     display: inherit !important;
 }

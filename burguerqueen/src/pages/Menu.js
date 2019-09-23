@@ -24,7 +24,7 @@ const Menu = () => {
             iconMenu2={Hotdog} altMenu2="hotdog"
             iconMenu3={Pizza} altMenu3="pizza"/>
             <Dropdown icon={Drinks} text="BEBIDAS" alt="bebida"/>
-            <Dropdowndrinks text="MALTEADAS" />
+            <Dropdowndrinks text="MALTEADAS"/>
             <Dropdown icon={Desserts} text="POSTRES" alt="postre" />
             </div>
         </section>

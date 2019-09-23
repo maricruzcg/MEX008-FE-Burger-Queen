@@ -108,3 +108,20 @@ border-radius: 1.25rem !important;
     vertical-align: 2.255em !important;
 }
 
+
+.modal-footer {
+    justify-content: center !important;
+}
+
+.modal-title {
+    margin-bottom: 1rem !important;
+    margin-top: 2.5em !important;
+    font-weight: bold !important;
+    margin-left: 2rem;
+}
+
+.form-control-lg {
+    font-size: 1.5rem !important;
+    border-radius: .8rem !important;
+    width: 123% !important;
+}

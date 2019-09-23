@@ -10,8 +10,10 @@ class Boxfinish extends React.Component {
                     <ul className="list-group list-group-flush">
                         <li className="list-group-item">Primer item</li>
                     </ul>
-                </div> 
 
+
+                </div>
+         
                 <div className="card-footer text-muted d-flex justify-content-center footer-dark">
                 <Btn text="FINALIZAR" class="btn finish-dark" />
                 </div>

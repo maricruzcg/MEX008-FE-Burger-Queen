@@ -1,7 +1,7 @@
 import React from 'react';
 import { ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem, CardImg } from 'reactstrap';
 import Btn from "./Btn";
-import Dropdowndrinks from "./Dropdowndrinks";
+//import Dropdowndrinks from "./Dropdowndrinks";
 
 
 
@@ -29,13 +29,25 @@ export default class Example extends React.Component {
               <p>{this.props.text}</p>
         </DropdownToggle>
         <DropdownMenu>
-          <DropdownItem><CardImg bottom width="87px" height="87px" src={this.props.iconMenu} alt={this.props.altMenu} />
-            <Dropdowndrinks text={this.props.text} />
+          <DropdownItem><CardImg bottom width="87px" height="87px" src={this.props.iconMenu} alt={this.props.altMenu}/>
+
           </DropdownItem>
+
+          <DropdownMenu>
+          <DropdownItem>
+              <Btn text="SOBERBIA" class="btn btn-dark"/>
+              <Btn text="MALICIA" class="btn btn-dark"/>
+              <Btn text="BANANA LIMBO" class="btn btn-dark"/>
+              <Btn text="GULA" class="btn btn-dark"/>
+              <Btn text="ALMA EN PENA" class="btn btn-dark"/>
+              <Btn text="ENCARNACIÓN" class="btn btn-dark"/>
+            </DropdownItem>
+          </DropdownMenu>
+
           <DropdownItem><CardImg bottom width="87px" height="87px" src={this.props.iconMenu1} alt={this.props.altMenu1}/></DropdownItem>
           <DropdownItem><CardImg bottom width="87px" height="87px" src={this.props.iconMenu2} alt={this.props.altMenu2}/></DropdownItem>
           <DropdownItem><CardImg bottom width="87px" height="87px" src={this.props.iconMenu3} alt={this.props.altMenu3}/></DropdownItem>
-          <Btn text="EXTRAS" class="btn btn-dark" />          
+         {/*  <Btn text="EXTRAS" class="btn btn-dark" />   */}        
         </DropdownMenu>
       </ButtonDropdown>
     );

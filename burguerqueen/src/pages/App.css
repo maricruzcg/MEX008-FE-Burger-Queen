@@ -29,7 +29,8 @@ btn {
     font-weight: 900;
 }
 
-.btn-dark:hover, .finish-dark:hover {
+/* .btn-dark:hover, .finish-dark:hover { */
+.og-hover:hover {
     background-color: #F08F58 !important;
     border-color: #F08F58 !important;
     color: black !important;
@@ -82,6 +83,10 @@ border-radius: 1.25rem !important;
     background-color: white;
 }
 
+.box-header{
+    border-radius: 0 !important;
+}
+
 .footer-dark {
     background-color: #121416a9!important;
 }
@@ -104,13 +109,29 @@ border-radius: 1.25rem !important;
     color: white;
 }
 
+.box-one{
+    background: #E6E6E6;
+    
+   
+}
+
+.box-two{
+   background: #C4C4C4;
+}
+
+.box-three{
+   background: #999999;
+}
+
 .card-img-bottom {
     width: unset !important;
 }
 
 .dropdown-toggle::after {
     vertical-align: 2.255em !important;
+
 }
+
 
 
 .modal-footer {

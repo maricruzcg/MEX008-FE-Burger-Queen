@@ -4,7 +4,7 @@ import Btn from "./Btn";
 class Navbar extends React.Component {
     render() {
         return (<nav className={"navbar nav-dark"}>
-            <Btn type="button" class="btn btn-dark double" text="IR A ADMINISTRACIÓN"/>
+            <Btn type="button" class="btn btn-dark double og-hover" text="IR A ADMINISTRACIÓN"/>
         </nav>)
     }
 };

@@ -5,7 +5,6 @@ import ModalUI from "../components/Modal";
 
 //import Username from "../components/Username";
 
-
 //Se importan los componentes: 1) Boxtip 2)Boxmenu 3)Btn 4) tips 
 const Home = () => {
     return (

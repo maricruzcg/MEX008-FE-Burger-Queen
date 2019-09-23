@@ -2,6 +2,7 @@ import React from 'react';
 import Nav from "../components/Navbar"
 import Boxfinish from "../components/Boxfinish"
 import Dropdown from "../components/Dropdown"
+import DropdownHamburguer from "../components/DropdownHamburguer"
 
 import Food from "../imgFED/plate.png"
 import Drinks from "../imgFED/drink.png"
@@ -18,7 +19,7 @@ const Menu = () => {
             <Nav />
             <Boxfinish />
             <Dropdown icon={Food} text="COMIDA" alt="plato"
-            iconMenu={Hamburguer} altMenu="hamburguer" 
+            iconMenu={Hamburguer} altMenu="hamburguer"
             iconMenu1={Salad} altMenu1="salad"
             iconMenu2={Hotdog} altMenu2="hotdog"
             iconMenu3={Pizza} altMenu3="pizza"/>

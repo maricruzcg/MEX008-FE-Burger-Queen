@@ -30,10 +30,21 @@ export default class Example extends React.Component {
         <DropdownMenu>
           <DropdownItem><CardImg bottom width="87px" height="87px" src={this.props.iconMenu} alt={this.props.altMenu}/></DropdownItem>
           <DropdownItem><CardImg bottom width="87px" height="87px" src={this.props.iconMenu1} alt={this.props.altMenu1}/></DropdownItem>
-          <DropdownItem><CardImg bottom width="87px" height="87px" src={this.props.iconMenu2} alt={this.props.altMenu2}/></DropdownItem>
+          <DropdownItem><CardImg bottom width="87px" height="87px" src={this.props.iconMenu2} alt={this.props.altMenu2}/>
+            <DropdownMenu>
+              <DropdownItem>
+                  <Btn text="JOCHOSLAW" class="btn btn-dark"/>
+                  <Btn text="XOLOESCUINTLE" class="btn btn-dark"/>
+                  <Btn text="PIT BULL" class="btn btn-dark"/>
+                  <Btn text="HACHIKO" class="btn btn-dark"/>
+                  <Btn text="PASTOR ALEMÁN" class="btn btn-dark"/>
+              </DropdownItem>
+            </DropdownMenu>
+          </DropdownItem>
           <DropdownItem><CardImg bottom width="87px" height="87px" src={this.props.iconMenu3} alt={this.props.altMenu3}/></DropdownItem>
           <Btn text="EXTRAS" class="btn btn-dark" />          
         </DropdownMenu>
+        
       </ButtonDropdown>
     );
   }

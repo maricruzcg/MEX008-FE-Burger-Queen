@@ -1,5 +1,6 @@
 import React from 'react';
-import { Col, Form, FormGroup, Label, Input } from 'reactstrap';
+import { Col, Form, Input } from 'reactstrap';
+//FormGroup, Label,
 
 export default class FormUI extends React.Component {
   render() {

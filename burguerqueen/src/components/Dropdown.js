@@ -1,7 +1,7 @@
 import React from 'react';
 import { ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem, CardImg } from 'reactstrap';
 import Btn from "./Btn";
-import Dropdowndrinks from "./Dropdowndrinks";
+//import Dropdowndrinks from "./Dropdowndrinks";
 
 
 
@@ -47,7 +47,7 @@ export default class Example extends React.Component {
           <DropdownItem><CardImg bottom width="87px" height="87px" src={this.props.iconMenu1} alt={this.props.altMenu1}/></DropdownItem>
           <DropdownItem><CardImg bottom width="87px" height="87px" src={this.props.iconMenu2} alt={this.props.altMenu2}/></DropdownItem>
           <DropdownItem><CardImg bottom width="87px" height="87px" src={this.props.iconMenu3} alt={this.props.altMenu3}/></DropdownItem>
-          <Btn text="EXTRAS" class="btn btn-dark" />          
+         {/*  <Btn text="EXTRAS" class="btn btn-dark" />   */}        
         </DropdownMenu>
       </ButtonDropdown>
     );

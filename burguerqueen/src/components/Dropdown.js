@@ -29,7 +29,7 @@ export default class Example extends React.Component {
               <p>{this.props.text}</p>
         </DropdownToggle>
         <DropdownMenu>
-          <DropdownItem><CardImg bottom width="87px" height="87px" src={this.props.iconMenu} alt={this.props.altMenu}/>
+          <DropdownItem><CardImg bottom width="87px" height="87px" src={this.props.iconMenu} alt={this.props.altMenu} />
             <Dropdowndrinks text={this.props.text} />
           </DropdownItem>
           <DropdownItem><CardImg bottom width="87px" height="87px" src={this.props.iconMenu1} alt={this.props.altMenu1}/></DropdownItem>

@@ -1,16 +1,13 @@
-import React from 'react';
+//import React from 'react';
 
-class table extends React.Component {
-    render() {
-        return (
-                <tr {this.props.text}>
-                </tr>
-                <tr {this.props.text}>
-                </tr>
-                <tr {this.props.text}>
-                </tr>
-           >
-    }
-};
+//class td extends React.Component {
+ //   render() {
+//        return (
+//            <td href={this.props.text}>
+//                className={[this.props.class]}
+//                {this.props.text}   
+//            </td>)
+//    }
+//};
 
-export default table;
+//export default td;

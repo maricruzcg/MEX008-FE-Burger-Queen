@@ -25,10 +25,10 @@ export default class Example extends React.Component {
               <Btn text="MALTEADAS" class="btn btn-secondary" />
           </DropdownToggle>
           <DropdownMenu>
-            <DropdownItem><Btn text="FRESA" className="btn btn-secondary" /></DropdownItem>
-            <DropdownItem><Btn text="MAZAPÁN" className="btn btn-secondary" /></DropdownItem>
-            <DropdownItem><Btn text="CHOCOMENTA"  /></DropdownItem>
-            <DropdownItem><Btn text="OTRO" className="btn btn-secondary" /></DropdownItem>
+            <DropdownItem><Btn text="FRESA" class="btn btn-secondary" /></DropdownItem>
+            <DropdownItem><Btn text="MAZAPÁN" class="btn btn-secondary" /></DropdownItem>
+            <DropdownItem><Btn text="CHOCOMENTA" class="btn btn-secondary"  /></DropdownItem>
+            <DropdownItem><Btn text="OTRO" class="btn btn-secondary" /></DropdownItem>
           </DropdownMenu>
         </ButtonDropdown>
       );

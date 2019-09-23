@@ -29,7 +29,8 @@ btn {
     font-weight: 900;
 }
 
-.btn-dark:hover, .finish-dark:hover {
+/* .btn-dark:hover, .finish-dark:hover { */
+.og-hover:hover {
     background-color: #F08F58 !important;
     border-color: #F08F58 !important;
     color: black !important;
@@ -80,6 +81,10 @@ border-radius: 1.25rem !important;
 
 .card-body {
     background-color: white;
+}
+
+.box-header{
+    border-radius: 0 !important;
 }
 
 .footer-dark {

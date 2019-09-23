@@ -17,7 +17,7 @@ const Menu = () => {
         <section className={"burguer"}>
             <div className={"overlay"}>
             <Nav />
-            <Boxfinish />
+            <Boxfinish footerText="FINALIZAR"/>
             <Dropdown icon={Food} text="COMIDA" alt="plato"
             iconMenu={Hamburguer} altMenu="hamburguer"
             iconMenu1={Salad} altMenu1="salad"

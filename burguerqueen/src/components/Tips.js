@@ -1,13 +1,16 @@
 import React from 'react';
+import ModalUI from './Modal';
 import Btn from './Btn';
 
 class Tarjettips extends React.Component {
   render() {
     return (
-  <div className={"card"}>
-    <div className={"card-body"}>
-    <Btn text="AGREGAR ORDEN" class="btn btn-dark btn-block"></Btn>
-    <table className={"table"}>
+      <div className={"card bg-light"} >
+        <div className="btn btn-dark btn-lg btn-block box-header">RECOMENDACIONES
+               {/*  <Btn text="RECOMENDACIONES" class="btn btn-dark btn-lg btn-block" /> */}
+               </div>
+          <div className="card-body">
+          <table className={"table"}>
       <tbody>
         <tr className={"box-one"}>
         <th scope="row"></th>
@@ -23,10 +26,17 @@ class Tarjettips extends React.Component {
         </tr>
       </tbody>
     </table>
-  </div>
-  </div>
+          </div>
+
+          <div className="card-footer text-muted d-flex justify-content-center footer-dark">
+          <ModalUI class="btn finish-dark og-hover" buttonLabel={this.props.footerText} title="¿A QUÉ NOMBRE VA A QUEDAR LA ORDEN?"/>
+                </div>
+   
+      </div>
   )
-  }
+}
 };
 
+
+   
 export default Tarjettips;

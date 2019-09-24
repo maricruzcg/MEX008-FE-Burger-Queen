@@ -47,7 +47,7 @@ render(){
             iconMenu3={Pizza} altMenu3="pizza"/>
             <Dropdown icon={Drinks} text="BEBIDAS" alt="bebida"/> 
             
-            {/* <Dropdown icon={Desserts} text="POSTRES" alt="postre" /> */}
+             <Dropdown icon={Desserts} text="POSTRES" alt="postre" /> 
             </div>
         </section>
     );

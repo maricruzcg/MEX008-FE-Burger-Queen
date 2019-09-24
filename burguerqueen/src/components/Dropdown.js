@@ -1,8 +1,6 @@
 import React from 'react';
 import { ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem, CardImg } from 'reactstrap';
 import Btn from "./Btn";
-//import Dropdowndrinks from "./Dropdowndrinks";
-import DropdownHam from "./DropdownHamburguer";
 
 
 
@@ -28,6 +26,8 @@ export default class Dropdown extends React.Component {
   }
 
   render() {
+
+    
     console.log("modifico el estado ", this.state.dropdownOpen);
     
     return (

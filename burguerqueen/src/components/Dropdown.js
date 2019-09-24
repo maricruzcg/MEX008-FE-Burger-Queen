@@ -1,11 +1,10 @@
 import React from 'react';
 import { ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem, CardImg } from 'reactstrap';
 import Btn from "./Btn";
-//import Dropdowndrinks from "./Dropdowndrinks";
 
 
 
-export default class Example extends React.Component {
+export default class Dropdown extends React.Component {
   constructor(props) {
     super(props);
 
@@ -15,33 +14,46 @@ export default class Example extends React.Component {
     };
   }
 
-  toggle() {
+  toggle(e) {
+    console.log(e.target);
+    if (e.target.dataset.typefood !== "typefood") {
+  
+    } 
     this.setState({
       dropdownOpen: !this.state.dropdownOpen
     });
+ 
   }
 
   render() {
+<<<<<<< HEAD
     return (estaurante 
       <ButtonDropdown className={"menu-icon"} isOpen={this.state.dropdownOpen} toggle={this.toggle}>
+=======
+
+    
+    console.log("modifico el estado ", this.state.dropdownOpen);
+    
+    return (
+      <ButtonDropdown className={"menu-icon"} data-typefood="typefood" isOpen={this.state.dropdownOpen} toggle={this.toggle}>
+>>>>>>> 4b4bfba9e75854512e2fc0a718d94c8e0c0f380b
         <DropdownToggle caret>
-            <CardImg bottom width="87px" height="87px" src={this.props.icon} alt={this.props.alt}/>
-              <p>{this.props.text}</p>
+            <CardImg  data-typefood="typefood" bottom width="87px" height="87px" src={this.props.icon} alt={this.props.alt}/>
+              <p  data-typefood="typefood" >{this.props.text}</p>
         </DropdownToggle>
         <DropdownMenu>
-          <DropdownItem><CardImg bottom width="87px" height="87px" src={this.props.iconMenu} alt={this.props.altMenu}/>
-
+          <DropdownItem>
+            {/* <DropdownHam/> */}
+            <CardImg bottom width="87px" height="87px" src={this.props.iconMenu} alt={this.props.altMenu}/>
           </DropdownItem>
 
           <DropdownMenu>
-          <DropdownItem>
-              <Btn text="SOBERBIA" class="btn btn-dark"/>
-              <Btn text="MALICIA" class="btn btn-dark"/>
-              <Btn text="BANANA LIMBO" class="btn btn-dark"/>
-              <Btn text="GULA" class="btn btn-dark"/>
-              <Btn text="ALMA EN PENA" class="btn btn-dark"/>
-              <Btn text="ENCARNACIÓN" class="btn btn-dark"/>
-            </DropdownItem>
+          <DropdownItem>  <Btn text="SOBERBIA" class="btn btn-dark og-hover"/>   </DropdownItem>
+          <DropdownItem> <Btn text="MALICIA" class="btn btn-dark og-hover"/></DropdownItem>
+          <DropdownItem> <Btn text="BANANA LIMBO" class="btn btn-dark og-hover"/></DropdownItem>
+          <DropdownItem>  <Btn text="GULA" class="btn btn-dark og-hover"/></DropdownItem>
+          <DropdownItem>   <Btn text="ALMA EN PENA" class="btn btn-dark og-hover"/></DropdownItem>
+          <DropdownItem>   <Btn text="ENCARNACIÓN" class="btn btn-dark og-hover"/> </DropdownItem>
           </DropdownMenu>
 
           <DropdownItem><CardImg bottom width="87px" height="87px" src={this.props.iconMenu1} alt={this.props.altMenu1}/></DropdownItem>
@@ -57,7 +69,7 @@ export default class Example extends React.Component {
             </DropdownMenu>
           </DropdownItem>
           <DropdownItem><CardImg bottom width="87px" height="87px" src={this.props.iconMenu3} alt={this.props.altMenu3}/></DropdownItem>
-         {/*  <Btn text="EXTRAS" class="btn btn-dark" />   */}        
+           <Btn text="EXTRAS" class="btn btn-dark extras og-hover" />         
         </DropdownMenu>
         
       </ButtonDropdown>

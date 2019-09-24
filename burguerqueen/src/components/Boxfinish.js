@@ -5,7 +5,7 @@ class Boxfinish extends React.Component {
     render() {
         return (
             <div className={"card bg-light"} >
-        <div className="btn btn-dark btn-lg btn-block box-header">RECOMENDACIONES
+        <div className="btn btn-dark btn-lg btn-block box-header">ORDEN DE:
                 
                 {/* <Btn text="ORDEN" class="btn btn-dark btn-lg btn-block" /> */}
                 </div>

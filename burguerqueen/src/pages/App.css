@@ -7,38 +7,52 @@ section{
 }
 
 .burguer{
-    background-image: url(../imgFED/imagebackground.png);  
+    background-image: url(../imgFED/logo.png);  
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover; 
+    /* background-size: cover;  */
+}
+
+.bg-soft {
+    
+   /*  #f8f9fa */
+    background-color: #F7F7F7;
 }
 
 .overlay {
     /*position: fixed;  Sit on top of the page content */
     width: 100vw;
     height: 100vh;
-    background-color: rgba(255, 255, 255, 0.5);
-    /*   z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+/*     background-color: rgba(255, 255, 255, 0.5);
+ */    /*   z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
 }
 
 .nav-dark {
-    background-color: rgba(162, 162, 162, 0.65)!important;
-}
+    background-color: #7B7162;
+     background-color: rgba(162, 162, 162, 0.65)!important;
+ }
 
-btn {
+.btn {
     font-weight: 900;
+/* background-color: #7B7162; */
 }
 
 /* .btn-dark:hover, .finish-dark:hover { */
-.og-hover:hover {
+/* .og-hover:hover {
     background-color: #F08F58 !important;
     border-color: #F08F58 !important;
+    color: black !important;
+} */
+
+.og-hover:hover {
+    background-color: #60DE5D !important;
+    border-color: #60DE5D !important;
     color: black !important;
 }
 
 .btn-secondary:hover {
-    background-color: #F08F58 !important;
-    border-color: #F08F58 !important;
+    background-color: #60DE5D !important;
+    border-color: #60DE5D !important;
 }
 
 /* .btn-drinks {
@@ -52,16 +66,29 @@ btn {
 .dropdown-menu {
 margin: 1.2rem 0 0 !important;
 border-radius: 1.25rem !important;
+background-color: #f8f9fa !important;
 }
 
 .dropdown-item {
-    padding: .25rem .7rem !important;
+        display: block;
+        width: 100%;
+        padding: .25rem 1.5rem;
+        clear: both;
+        font-weight: 400;
+        color: #212529;
+        text-align: inherit;
+        white-space: nowrap;
+        background-color: transparent;
+        border: 0;
+        padding: .25rem .7rem !important;
+        border-radius: 1.25rem;
+
 }
 
-.dropdown-item:hover {
-    box-shadow: 0px 9px 18px rgba(0, 0, 0, 0.18), 0px 6px 5px rgba(0, 0, 0, 0.24);
-    border-radius: 1.25rem;
-}
+/* .dropdown-item:hover {*/
+/*     box-shadow: 0px 9px 18px rgba(0, 0, 0, 0.18), 0px 6px 5px rgba(0, 0, 0, 0.24);*/    
+    /*    border-radius: 1.25rem;
+} */
 
 .double {
     width: 90%;
@@ -80,7 +107,7 @@ border-radius: 1.25rem !important;
 }
 
 .card-body {
-    background-color: white;
+    background-color: #f8f9fa;
 }
 
 .box-header{
@@ -88,7 +115,7 @@ border-radius: 1.25rem !important;
 }
 
 .footer-dark {
-    background-color: #121416a9!important;
+ background-color: #121416a9!important; 
 }
 
 .finish-dark {
@@ -110,9 +137,7 @@ border-radius: 1.25rem !important;
 }
 
 .box-one{
-    background: #E6E6E6;
-    
-   
+    background: #E6E6E6;  
 }
 
 .box-two{
@@ -132,8 +157,6 @@ border-radius: 1.25rem !important;
 
 }
 
-
-
 .modal-footer {
     justify-content: center !important;
 }
@@ -149,4 +172,9 @@ border-radius: 1.25rem !important;
     font-size: 1.5rem !important;
     border-radius: .8rem !important;
     width: 123% !important;
+}
+
+.extras {
+    margin-top: 1.8rem;
+    margin-right: .7rem;
 }

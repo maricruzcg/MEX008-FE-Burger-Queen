@@ -1,12 +1,10 @@
 import React from 'react';
 import { ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem, CardImg } from 'reactstrap';
 import Btn from "./Btn";
-//import Dropdowndrinks from "./Dropdowndrinks";
-import DropdownHam from "./DropdownHamburguer";
 
 
 
-export default class Example extends React.Component {
+export default class Dropdown extends React.Component {
   constructor(props) {
     super(props);
 
@@ -19,7 +17,7 @@ export default class Example extends React.Component {
   toggle(e) {
     console.log(e.target);
     if (e.target.dataset.typefood !== "typefood") {
-     
+  
     } 
     this.setState({
       dropdownOpen: !this.state.dropdownOpen
@@ -28,6 +26,8 @@ export default class Example extends React.Component {
   }
 
   render() {
+
+    
     console.log("modifico el estado ", this.state.dropdownOpen);
     
     return (

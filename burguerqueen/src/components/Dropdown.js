@@ -6,7 +6,7 @@ import DropdownHam from "./DropdownHamburguer";
 
 
 
-export default class Example extends React.Component {
+export default class Dropdown extends React.Component {
   constructor(props) {
     super(props);
 
@@ -19,7 +19,7 @@ export default class Example extends React.Component {
   toggle(e) {
     console.log(e.target);
     if (e.target.dataset.typefood !== "typefood") {
-     
+  
     } 
     this.setState({
       dropdownOpen: !this.state.dropdownOpen

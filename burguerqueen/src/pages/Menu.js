@@ -2,7 +2,6 @@ import React from 'react';
 import Nav from "../components/Navbar"
 import Boxfinish from "../components/Boxfinish"
 import Dropdown from "../components/Dropdown"
-import DropdownHamburguer from "../components/DropdownHamburguer"
 
 import Food from "../imgFED/plate.png"
 import Drinks from "../imgFED/drink.png"

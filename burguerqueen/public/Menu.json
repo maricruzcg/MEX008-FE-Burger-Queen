@@ -1,0 +1,59 @@
+{
+    "COMIDA": {
+        "HAMBURGUESA": [
+            "MALICIA",
+            "SOBERBIA",
+            "GULA",
+            "ALMA EN PENA",
+            "ENCARNACIÓN",
+            "BANANA LIMBO"
+        ],
+
+        "ENSALADA": [
+            "DELÍRIUM",
+            "PARAÍSO PERDIDO"
+        ],
+
+        "HOTDOG": [
+            "JOCHOSLAW",
+            "XOLOESCUINTLE",
+            "PIBULL",
+            "HACHIKO",
+            "PASTOR ALEMÁN"
+        ],
+
+        "PIZZA": [
+            "CHANQUE",
+            "SODOMA",
+            "LUJURIA",
+            "ÁNGEL CAÍDO",
+            "PURGATORIO",
+            "TIKI-HAWAIANA",
+            "MARGARITA"
+        ],
+    },
+
+    "BEBIDAS": {
+        "MALTEADA": [
+            "FRESA",
+            "CHOCOMENTA",
+            "MAZAPÁN",
+        ],
+
+        "SODA ITALIANA": [
+            "PIÑA & COCO",
+            "LIMÓN & JÍCAMA",
+            "MARACUYÁ",
+            "FRESA & ALBAHACA",
+            "MANZANA VERDE",
+            "MANGO"
+        ],
+    },
+
+    "POSTRES": [
+        "MOUSSE",
+        "VEGATINA",
+        "HELL GIRL",
+        "PAN DULCE",
+    ],
+}

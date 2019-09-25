@@ -1,8 +1,8 @@
 {
   "name": "burguerqueen",
-  "version": "0.1.0",
+  "version": "2.0.0",
   "private": true,
-  "homepage": "https://vianeylararangel.github.io/MEX008-FE-Burger-Queen",
+  "homepage": "https://github.com/VianeyLaraRangel/MEX008-FE-Burger-Queen",
   "dependencies": {
     "bootstrap": "^4.3.1",
     "react": "^16.9.0",

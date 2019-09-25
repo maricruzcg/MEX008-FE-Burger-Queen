@@ -26,17 +26,12 @@ export default class Dropdown extends React.Component {
   }
 
   render() {
-<<<<<<< HEAD
-    return (estaurante 
-      <ButtonDropdown className={"menu-icon"} isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-=======
 
     
     console.log("modifico el estado ", this.state.dropdownOpen);
     
     return (
       <ButtonDropdown className={"menu-icon"} data-typefood="typefood" isOpen={this.state.dropdownOpen} toggle={this.toggle}>
->>>>>>> 4b4bfba9e75854512e2fc0a718d94c8e0c0f380b
         <DropdownToggle caret>
             <CardImg  data-typefood="typefood" bottom width="87px" height="87px" src={this.props.icon} alt={this.props.alt}/>
               <p  data-typefood="typefood" >{this.props.text}</p>

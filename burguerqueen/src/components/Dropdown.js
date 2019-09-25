@@ -1,9 +1,6 @@
 import React from 'react';
 import { ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem, CardImg } from 'reactstrap';
 import Btn from "./Btn";
-//import Dropdowndrinks from "./Dropdowndrinks";
-
-
 
 export default class Example extends React.Component {
   constructor(props) {
@@ -11,7 +8,18 @@ export default class Example extends React.Component {
 
     this.toggle = this.toggle.bind(this);
     this.state = {
-      dropdownOpen: false
+      dropdownOpen: false,
+      "btnmenu": {
+        "food": {
+          "menu": ["hamburguer", "salad", "hotdog", "desert"]
+        },
+        "drinks": {
+          "menu": ["milkshake", "flavorwater", "italiansoda"]
+        },
+        "desserts": {
+          "menu": [""]
+        }
+      }
     };
   }
 

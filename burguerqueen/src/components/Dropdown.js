@@ -38,7 +38,6 @@ export default class Dropdown extends React.Component {
         </DropdownToggle>
         <DropdownMenu>
           <DropdownItem>
-            {/* <DropdownHam/> */}
             <CardImg bottom width="87px" height="87px" src={this.props.iconMenu} alt={this.props.altMenu}/>
           </DropdownItem>
 

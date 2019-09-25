@@ -1,6 +1,6 @@
 import React from 'react';
 import { ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem, CardImg } from 'reactstrap';
-import Btn from "./Btn";
+import Btn from "../components/Btn";
 import Hamburguer from "../imgFED/hamburguer.png"
 
 //import Dropdowndrinks from "./Dropdowndrinks";

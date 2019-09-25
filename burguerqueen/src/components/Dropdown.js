@@ -1,5 +1,12 @@
 import React from 'react';
-import { ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem, CardImg } from 'reactstrap';
+import { 
+  Badge,
+  ButtonDropdown, 
+  CardImg,
+  DropdownItem,
+  DropdownMenu,
+  DropdownToggle
+} from 'reactstrap';
 import Btn from "./Btn";
 
 
@@ -42,12 +49,12 @@ export default class Dropdown extends React.Component {
           </DropdownItem>
 
           <DropdownMenu>
-          <DropdownItem>  <Btn text="SOBERBIA" class="btn btn-dark og-hover"/>   </DropdownItem>
-          <DropdownItem> <Btn text="MALICIA" class="btn btn-dark og-hover"/></DropdownItem>
-          <DropdownItem> <Btn text="BANANA LIMBO" class="btn btn-dark og-hover"/></DropdownItem>
-          <DropdownItem>  <Btn text="GULA" class="btn btn-dark og-hover"/></DropdownItem>
-          <DropdownItem>   <Btn text="ALMA EN PENA" class="btn btn-dark og-hover"/></DropdownItem>
-          <DropdownItem>   <Btn text="ENCARNACIÓN" class="btn btn-dark og-hover"/> </DropdownItem>
+          <DropdownItem>  <Badge color="dark">{"SOBERBIA"}</Badge>  </DropdownItem>
+          <DropdownItem> <Badge color="dark">{"MALICIA"}</Badge></DropdownItem>
+          <DropdownItem> <Badge color="dark">{"BANANA LIMBO"}</Badge></DropdownItem>
+          <DropdownItem>  <Badge color="dark">{"GULA"}</Badge></DropdownItem>
+          <DropdownItem>   <Badge color="dark">{"ALMA EN PENA"}</Badge></DropdownItem>
+          <DropdownItem>   <Badge color="dark">{"ENCARNACIÓN"}</Badge></DropdownItem>
           </DropdownMenu>
 
           <DropdownItem><CardImg bottom width="87px" height="87px" src={this.props.iconMenu1} alt={this.props.altMenu1}/></DropdownItem>

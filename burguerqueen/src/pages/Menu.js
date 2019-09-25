@@ -21,7 +21,7 @@ class Menu extends React.Component {
     }
 
 componentDidMount() {
-    fetch('../../public/data/Menu.json')
+    fetch('./data/Menu.json')
     .then(response => response.json())
     .then(data => {
         console.log(data);
@@ -33,7 +33,7 @@ componentDidMount() {
 }
 
 render(){
-    console.log(this.state);
+   // console.log(this.state);
     
     return (
         <section className={"bg-soft"}>

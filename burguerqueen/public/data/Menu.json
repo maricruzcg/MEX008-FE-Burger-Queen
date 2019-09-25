@@ -8,12 +8,10 @@
             "ENCARNACIÓN",
             "BANANA LIMBO"
         ],
-
         "ENSALADA": [
             "DELÍRIUM",
             "PARAÍSO PERDIDO"
         ],
-
         "HOTDOG": [
             "JOCHOSLAW",
             "XOLOESCUINTLE",
@@ -21,7 +19,6 @@
             "HACHIKO",
             "PASTOR ALEMÁN"
         ],
-
         "PIZZA": [
             "CHANQUE",
             "SODOMA",
@@ -30,16 +27,14 @@
             "PURGATORIO",
             "TIKI-HAWAIANA",
             "MARGARITA"
-        ],
+        ]
     },
-
     "BEBIDAS": {
         "MALTEADA": [
             "FRESA",
             "CHOCOMENTA",
-            "MAZAPÁN",
+            "MAZAPÁN"
         ],
-
         "SODA ITALIANA": [
             "PIÑA & COCO",
             "LIMÓN & JÍCAMA",
@@ -47,13 +42,12 @@
             "FRESA & ALBAHACA",
             "MANZANA VERDE",
             "MANGO"
-        ],
+        ]
     },
-
     "POSTRES": [
         "MOUSSE",
         "VEGATINA",
         "HELL GIRL",
-        "PAN DULCE",
-    ],
+        "PAN DULCE"
+    ]
 }

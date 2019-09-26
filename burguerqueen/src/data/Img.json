@@ -1,0 +1,7 @@
+{
+    "IMG": {
+"COMIDA": "../imgFED/plate.png",
+"BEBIDAS": "../imgFED/drink.png",
+"POSTRES": "../imgFED/icecream.png"
+    }
+}

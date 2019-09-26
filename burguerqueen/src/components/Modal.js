@@ -27,9 +27,7 @@ class ModalUI extends React.Component {
       <div>
         <Button className={this.props.class} color="dark" onClick={this.toggle}>{this.props.buttonLabel}</Button>
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-    
-        <ModalHeader toggle={this.toggle}>{this.props.title}</ModalHeader>
-
+          <ModalHeader toggle={this.toggle}>{this.props.title}</ModalHeader>
           <ModalBody>
             <FormUI name="costumer-name" id="costumer-name" placeholder="Nombre del cliente"/>
           </ModalBody>

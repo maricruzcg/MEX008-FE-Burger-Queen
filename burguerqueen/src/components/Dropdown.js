@@ -35,7 +35,7 @@ export default class Dropdown extends React.Component {
   render() {
 
     
-    console.log("modifico el estado ", this.state.dropdownOpen);
+    //console.log("modifico el estado ", this.state.dropdownOpen);
     
     return (
       <ButtonDropdown className={"menu-icon"} data-typefood="typefood" isOpen={this.state.dropdownOpen} toggle={this.toggle}>
@@ -49,12 +49,12 @@ export default class Dropdown extends React.Component {
           </DropdownItem>
 
           <DropdownMenu>
-          <DropdownItem>  <Badge color="dark">{"SOBERBIA"}</Badge>  </DropdownItem>
-          <DropdownItem> <Badge color="dark">{"MALICIA"}</Badge></DropdownItem>
-          <DropdownItem> <Badge color="dark">{"BANANA LIMBO"}</Badge></DropdownItem>
-          <DropdownItem>  <Badge color="dark">{"GULA"}</Badge></DropdownItem>
-          <DropdownItem>   <Badge color="dark">{"ALMA EN PENA"}</Badge></DropdownItem>
-          <DropdownItem>   <Badge color="dark">{"ENCARNACIÓN"}</Badge></DropdownItem>
+          <DropdownItem>  <Badge color="dark" pill>{"SOBERBIA"}</Badge>  </DropdownItem>
+          <DropdownItem> <Badge color="dark" pill>{"MALICIA"}</Badge></DropdownItem>
+          <DropdownItem> <Badge color="dark" pill>{"BANANA LIMBO"}</Badge></DropdownItem>
+          <DropdownItem>  <Badge color="dark" pill>{"GULA"}</Badge></DropdownItem>
+          <DropdownItem>   <Badge color="dark" pill>{"ALMA EN PENA"}</Badge></DropdownItem>
+          <DropdownItem>   <Badge color="dark" pill>{"ENCARNACIÓN"}</Badge></DropdownItem>
           </DropdownMenu>
 
           <DropdownItem><CardImg bottom width="87px" height="87px" src={this.props.iconMenu1} alt={this.props.altMenu1}/></DropdownItem>

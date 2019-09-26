@@ -1,5 +1,12 @@
 import React from 'react';
-import { ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem, CardImg } from 'reactstrap';
+import { 
+  Badge,
+  ButtonDropdown, 
+  CardImg,
+  DropdownItem,
+  DropdownMenu,
+  DropdownToggle
+} from 'reactstrap';
 import Btn from "./Btn";
 
 
@@ -28,7 +35,7 @@ export default class Dropdown extends React.Component {
   render() {
 
     
-    console.log("modifico el estado ", this.state.dropdownOpen);
+    //console.log("modifico el estado ", this.state.dropdownOpen);
     
     return (
       <ButtonDropdown className={"menu-icon"} data-typefood="typefood" isOpen={this.state.dropdownOpen} toggle={this.toggle}>
@@ -42,12 +49,12 @@ export default class Dropdown extends React.Component {
           </DropdownItem>
 
           <DropdownMenu>
-          <DropdownItem>  <Btn text="SOBERBIA" class="btn btn-dark og-hover"/>   </DropdownItem>
-          <DropdownItem> <Btn text="MALICIA" class="btn btn-dark og-hover"/></DropdownItem>
-          <DropdownItem> <Btn text="BANANA LIMBO" class="btn btn-dark og-hover"/></DropdownItem>
-          <DropdownItem>  <Btn text="GULA" class="btn btn-dark og-hover"/></DropdownItem>
-          <DropdownItem>   <Btn text="ALMA EN PENA" class="btn btn-dark og-hover"/></DropdownItem>
-          <DropdownItem>   <Btn text="ENCARNACIÓN" class="btn btn-dark og-hover"/> </DropdownItem>
+          <DropdownItem>  <Badge color="dark" pill>{"SOBERBIA"}</Badge>  </DropdownItem>
+          <DropdownItem> <Badge color="dark" pill>{"MALICIA"}</Badge></DropdownItem>
+          <DropdownItem> <Badge color="dark" pill>{"BANANA LIMBO"}</Badge></DropdownItem>
+          <DropdownItem>  <Badge color="dark" pill>{"GULA"}</Badge></DropdownItem>
+          <DropdownItem>   <Badge color="dark" pill>{"ALMA EN PENA"}</Badge></DropdownItem>
+          <DropdownItem>   <Badge color="dark" pill>{"ENCARNACIÓN"}</Badge></DropdownItem>
           </DropdownMenu>
 
           <DropdownItem><CardImg bottom width="87px" height="87px" src={this.props.iconMenu1} alt={this.props.altMenu1}/></DropdownItem>

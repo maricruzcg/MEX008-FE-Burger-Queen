@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody } from 'reactstrap';
-
 import FormUI from "./Form";
 
 
@@ -31,7 +30,6 @@ class ModalUI extends React.Component {
           <ModalBody>
             <FormUI name="costumer-name" id="costumer-name" placeholder="Nombre del cliente" closeModal={this.toggle}/>
           </ModalBody>
-
         </Modal>
       </div>
     );

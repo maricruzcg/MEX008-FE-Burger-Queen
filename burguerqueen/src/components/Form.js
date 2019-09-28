@@ -14,6 +14,7 @@ class FormUI extends React.Component {
 }
 
   handleClick (ev) {
+
     if (this.state.client.name) {
       ev.preventDefault();
       this.props.history.push('/Menu');
@@ -30,6 +31,7 @@ class FormUI extends React.Component {
     });
     const clientName = e.target.value;
     localStorage.setItem('myData', clientName);
+
 };
 
  

@@ -22,7 +22,7 @@ componentDidMount() {
 }
 
   render() {
-      console.log(this.state.recommendations);
+    //  console.log(this.state.recommendations);
       
     return (
         <div className={"card bg-light"} >

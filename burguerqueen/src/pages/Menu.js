@@ -1,4 +1,6 @@
 import React from 'react';
+//import UserContext from '../UserContext'
+
 import Nav from "../components/Navbar"
 import Boxfinish from "../components/Boxfinish"
 import { ButtonDropdown, DropdownToggle, CardImg } from 'reactstrap';
@@ -20,11 +22,17 @@ class Menu extends React.Component {
         this.state = {
         menu: null,
         img: null,
-        prices: null
+        prices: null,
+        client: null
         };
     }
 
+   // static contextType = UserContext
+
 componentDidMount() {
+/*       const clientName = this.context.client
+      this.setState({ client: clientName }); */
+
     fetch('./data/Menu.json')
     .then(response => response.json())
     .then(data => {
@@ -42,16 +50,18 @@ componentDidMount() {
             img: data
         })
     });
+
+
 }
 
 render(){
     if(!this.state.menu){
-   console.log(this.state.menu);
+   //console.log(this.state.menu);
     return (
         <p>:c</p>
     )
     } else {
-        console.log(this.state.menu.BEBIDAS)
+        //console.log(this.state.menu.BEBIDAS)
     return (
         <section className={"bg-soft"}>
             <div className={"overlay"}>

@@ -7,7 +7,7 @@ const Home = () => {
         <section className={"bg-soft"}>
             <div className={"overlay"}>
             <Nav />
-            <Boxtip footerText="FINALIZAR"/>
+            <Boxtip footerText="ABRIR ORDEN"/>
              {/* <Tips  footerText="ABRIR ORDEN"/> */}
             </div>    
         </section>

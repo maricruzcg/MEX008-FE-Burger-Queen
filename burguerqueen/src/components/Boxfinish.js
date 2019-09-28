@@ -1,20 +1,12 @@
 import React from 'react';
-import { UserConsumer } from '../UserContext'
-
 import Btn from "./Btn";
 
 class Boxfinish extends React.Component {
     
     render() {
-        const data = localStorage.getItem('myData').toUpperCase();
         return (
-            <UserConsumer>
-                        {props => {
-                            
-                            console.log(props);
-                                      return (
           <div className={"card bg-light"} >
-          <div className="btn btn-dark btn-lg btn-block box-header"><p>ORDEN DE:</p> <p>{data}</p>
+          <div className="btn btn-dark btn-lg btn-block box-header">ORDEN DE: <p>{this.props.clientName}</p>
               </div>
                   <div className="card-body">
                       <ul className="list-group list-group-flush">
@@ -27,16 +19,7 @@ class Boxfinish extends React.Component {
                   </div>
               </div>
           )
-        }}
-            </UserConsumer>
-
-        )
     }
 };
 
 export default Boxfinish;
-
-/* <button className="card-body">
-                    <h5 className="card-title">ORDEN 1</h5>
-                    <p className="card-text">AQUI NOMBRE DEL CLINTX</p>
-                </div> */

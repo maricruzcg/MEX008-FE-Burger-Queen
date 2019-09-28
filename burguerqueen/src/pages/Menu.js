@@ -1,10 +1,10 @@
 import React from 'react';
-//import UserContext from '../UserContext'
 
 import Nav from "../components/Navbar"
 import Boxfinish from "../components/Boxfinish"
 import { ButtonDropdown, DropdownToggle, CardImg } from 'reactstrap';
 
+//import Img from "../imgFED/"
 import Food from "../imgFED/plate.png"
 
 /* import Dropdown from "../components/Dropdown"
@@ -23,50 +23,43 @@ class Menu extends React.Component {
         menu: null,
         img: null,
         prices: null,
-        client: null
+        client: {
+            name: null,
+        }
         };
     }
 
-   // static contextType = UserContext
-
 componentDidMount() {
-/*       const clientName = this.context.client
-      this.setState({ client: clientName }); */
-
     fetch('./data/Menu.json')
     .then(response => response.json())
     .then(data => {
-      //  console.log(data);        
         this.setState({
-            menu: data
+            menu: data.MENU,
+            img: data.IMG,
+            prices: data.PRICES
         })
+     //   console.log(data.MENU);        
     });
 
-    fetch('./data/Img.json')
-    .then(response => response.json())
-    .then(data => {
-      //  console.log(data);        
-        this.setState({
-            img: data
-        })
-    });
-
-
+    this.setState({
+        client: {
+        name: localStorage.getItem('myData').toUpperCase(),
+        }
+    })
 }
 
 render(){
-    if(!this.state.menu){
+     if(!this.state.menu){
    //console.log(this.state.menu);
     return (
-        <p>:c</p>
+        <p>Loading...</p>
     )
-    } else {
-        //console.log(this.state.menu.BEBIDAS)
+    } else { 
     return (
         <section className={"bg-soft"}>
             <div className={"overlay"}>
             <Nav />    
-            <Boxfinish footerText="FINALIZAR"/>  
+            <Boxfinish clientName={this.state.client.name} footerText="FINALIZAR"/>  
             {
              this.state.menu ? 
     Object.keys(this.state.menu).map(element => (
@@ -75,12 +68,11 @@ render(){
           <CardImg  bottom width="87px" height="87px" src={Food} alt={element}/>
             <p  data-typefood={element} >{element}</p>
       </DropdownToggle>
-
-
       
+
       </ButtonDropdown>
         )) :
-        <div>No hay recomendaciones</div>
+        <div>Fallo al cargar data</div>
 
             
     }

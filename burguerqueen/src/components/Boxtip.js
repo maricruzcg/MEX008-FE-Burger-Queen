@@ -41,7 +41,6 @@ componentDidMount() {
 <div className="card-footer text-muted d-flex justify-content-center footer-dark">
 <ModalUI class="btn finish-dark og-hover" buttonLabel={this.props.footerText} title="¿A QUÉ NOMBRE VA A QUEDAR LA ORDEN?"/>
       </div>
-
 </div>
     );
   }

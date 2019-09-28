@@ -1,19 +1,55 @@
-import React from 'react';
-import { Col, Form, Input } from 'reactstrap';
-//FormGroup, Label,
 
-export default class FormUI extends React.Component {
+import React from 'react';
+import { withRouter } from 'react-router-dom';
+import { Col, Form, Input, Button } from 'reactstrap';
+
+class FormUI extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+    client: {
+      name: ''
+    }
+    };
+}
+
+  handleClick (ev) {
+
+    if (this.state.client.name) {
+      ev.preventDefault();
+      this.props.history.push('/Menu');
+      this.props.closeModal();      
+    } else {
+      
+    }
+  };
+
+  onChange = e =>  {
+    this.setState({ 
+      client: {
+      name: e.target.value} 
+    });
+    const clientName = e.target.value;
+    localStorage.setItem('myData', clientName);
+
+};
+
+ 
   render() {
+
     return (
       <Form>
-{/*         <FormGroup row>
-          <Label for={this.props.name} sm={2} size="lg">{this.props.label}</Label> */}
+
           <Col sm={10}>
-            <Input type="text" name={this.props.name} id={this.props.id} placeholder={this.props.placeholder} bsSize="lg" />
+            <Input type="text" value={this.state.client.name} name={this.props.name} id={this.props.id} placeholder={this.props.placeholder} bsSize="lg" onChange={e => this.onChange(e)} required/>
           </Col>
-{/*         </FormGroup> */}
+          <Button type="submit" className={"btn btn-dark"}   onClick={this.handleClick.bind(this)}>GUARDAR</Button>
       </Form>
     );
   }
 }
+
+
+
+export default withRouter(FormUI);
 

@@ -15,18 +15,27 @@ class FormUI extends React.Component {
 }
 
   handleClick (ev) {
-    ev.preventDefault();
-    this.props.history.push('/Menu');
-    this.props.closeModal();
+    if (ev.target.value) {
 
-console.log(this.state.client);
+      ev.preventDefault();
+      this.props.history.push('/Menu');
+      this.props.closeModal();
+      
+    } else {
+     // alert("¡Debes ingresar el nombre del cliente!")
+    }
+
 
   };
 
   onChange = e =>  {
+
+
     this.setState({ client: e.target.value });
     const data = e.target.value;
-    localStorage.setItem('myData', data);
+    localStorage.setItem('myData', data); 
+    
+
 };
 
  

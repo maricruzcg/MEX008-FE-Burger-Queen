@@ -15,12 +15,13 @@ class FormUI extends React.Component {
 }
 
   handleClick (ev) {
-    ev.preventDefault();
-    this.props.history.push('/Menu');
-    this.props.closeModal();
-
-console.log(this.state.client);
-
+    if (this.state.client) {
+      ev.preventDefault();
+      this.props.history.push('/Menu');
+      this.props.closeModal();      
+    } else {
+      
+    }
   };
 
   onChange = e =>  {

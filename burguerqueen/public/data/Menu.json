@@ -54,9 +54,9 @@
     },
 
     "IMG": {
-        "COMIDA": "plate",
-        "BEBIDAS": "drink",
-        "POSTRES": "icecream"
+        "COMIDA": "../assets/plate.png",
+        "BEBIDAS": "../assets/drink.png",
+        "POSTRES": "../assets/icecream.png"
             },
 
     "PRICES": {

@@ -1,20 +1,31 @@
 {
   "name": "burguerqueen",
   "version": "0.1.0",
+  "description": "App for restaurant",
+  "main":"server.js",
   "private": true,
   "homepage": "https://vianeylararangel.github.io/MEX008-FE-Burger-Queen",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "bootstrap": "^4.3.1",
+    "config": "^3.2.2",
+    "express-validator": "^6.2.0",
+    "gravatar": "^1.8.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.7.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.1.1",
-    "reactstrap": "^8.0.1"
+    "reactstrap": "^8.0.1",
+    "request": "^2.88.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node server",
+    "server": "nodemon server",
+
+    "local": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
@@ -35,7 +46,9 @@
     ]
   },
   "devDependencies": {
+    "concurrently": "^4.1.2",
     "gh-pages": "^2.1.1",
+    "nodemon": "^1.19.2",
     "ws": "3.3.2"
   }
 }

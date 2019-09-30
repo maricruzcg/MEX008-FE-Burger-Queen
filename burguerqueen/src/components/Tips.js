@@ -1,6 +1,5 @@
 import React from 'react';
 import ModalUI from './Modal';
-import Btn from './Btn';
 
 class Tarjettips extends React.Component {
   render() {

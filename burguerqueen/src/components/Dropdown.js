@@ -1,8 +1,20 @@
 import React from 'react';
-import { ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem, CardImg } from 'reactstrap';
+import { 
+  Badge,
+  ButtonDropdown, 
+  CardImg,
+  DropdownItem,
+  DropdownMenu,
+  DropdownToggle
+} from 'reactstrap';
 import Btn from "./Btn";
+<<<<<<< HEAD
+=======
 
-export default class Example extends React.Component {
+
+>>>>>>> origin/master
+
+export default class Dropdown extends React.Component {
   constructor(props) {
     super(props);
 
@@ -23,39 +35,46 @@ export default class Example extends React.Component {
     };
   }
 
-  toggle() {
+  toggle(e) {
+    console.log(e.target);
+    if (e.target.dataset.typefood !== "typefood") {
+  
+    } 
     this.setState({
       dropdownOpen: !this.state.dropdownOpen
     });
+ 
   }
 
   render() {
+
+    
+    //console.log("modifico el estado ", this.state.dropdownOpen);
+    
     return (
-      <ButtonDropdown className={"menu-icon"} isOpen={this.state.dropdownOpen} toggle={this.toggle}>
+      <ButtonDropdown className={"menu-icon"} data-typefood="typefood" isOpen={this.state.dropdownOpen} toggle={this.toggle}>
         <DropdownToggle caret>
-            <CardImg bottom width="87px" height="87px" src={this.props.icon} alt={this.props.alt}/>
-              <p>{this.props.text}</p>
+            <CardImg  data-typefood="typefood" bottom width="87px" height="87px" src={this.props.icon} alt={this.props.alt}/>
+              <p  data-typefood="typefood" >{this.props.text}</p>
         </DropdownToggle>
         <DropdownMenu>
-          <DropdownItem><CardImg bottom width="87px" height="87px" src={this.props.iconMenu} alt={this.props.altMenu}/>
-
+          <DropdownItem>
+            <CardImg bottom width="87px" height="87px" src={this.props.iconMenu} alt={this.props.altMenu}/>
           </DropdownItem>
 
           <DropdownMenu>
-          <DropdownItem>
-              <Btn text="SOBERBIA" class="btn btn-dark"/>
-              <Btn text="MALICIA" class="btn btn-dark"/>
-              <Btn text="BANANA LIMBO" class="btn btn-dark"/>
-              <Btn text="GULA" class="btn btn-dark"/>
-              <Btn text="ALMA EN PENA" class="btn btn-dark"/>
-              <Btn text="ENCARNACIÓN" class="btn btn-dark"/>
-            </DropdownItem>
+          <DropdownItem>  <Badge color="dark" pill>{"SOBERBIA"}</Badge>  </DropdownItem>
+          <DropdownItem> <Badge color="dark" pill>{"MALICIA"}</Badge></DropdownItem>
+          <DropdownItem> <Badge color="dark" pill>{"BANANA LIMBO"}</Badge></DropdownItem>
+          <DropdownItem>  <Badge color="dark" pill>{"GULA"}</Badge></DropdownItem>
+          <DropdownItem>   <Badge color="dark" pill>{"ALMA EN PENA"}</Badge></DropdownItem>
+          <DropdownItem>   <Badge color="dark" pill>{"ENCARNACIÓN"}</Badge></DropdownItem>
           </DropdownMenu>
 
           <DropdownItem><CardImg bottom width="87px" height="87px" src={this.props.iconMenu1} alt={this.props.altMenu1}/></DropdownItem>
           <DropdownItem><CardImg bottom width="87px" height="87px" src={this.props.iconMenu2} alt={this.props.altMenu2}/></DropdownItem>
           <DropdownItem><CardImg bottom width="87px" height="87px" src={this.props.iconMenu3} alt={this.props.altMenu3}/></DropdownItem>
-         {/*  <Btn text="EXTRAS" class="btn btn-dark" />   */}        
+           <Btn text="EXTRAS" class="btn btn-dark extras og-hover" />         
         </DropdownMenu>
       </ButtonDropdown>
     );

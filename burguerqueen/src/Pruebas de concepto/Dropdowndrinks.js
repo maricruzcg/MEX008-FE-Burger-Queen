@@ -1,6 +1,6 @@
 import React from 'react';
 import { ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
-import Btn from "./Btn";
+import Btn from "../components/Btn";
 
 export default class Example extends React.Component {
     constructor(props) {
@@ -20,7 +20,8 @@ export default class Example extends React.Component {
 
     render() {
         return (
-            <ButtonDropdown  isOpen={this.state.dropdownOpen} toggle={this.toggle}>
+      
+            <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
                 <DropdownToggle caret>
                     <Btn text="MALTEADAS" class="btn btn-secondary" />
                 </DropdownToggle>

@@ -7,10 +7,31 @@ section{
 }
 
 .burguer{
-    background-image: url(../imgFED/logo.png);  
+    background-image: url(../imgFED/imagebackground.png);  
     background-position: center;
     background-repeat: no-repeat;
     /* background-size: cover;  */
+}
+
+.slate{
+    background-image: url(../imgFED/slate.jpeg);  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+
+.pg{
+    background-image: url(../imgFED/PB.jpeg);  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+
+.vb{
+    background-image: url(../imgFED/vbnapa.jpeg);  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
 }
 
 .bg-soft {    
@@ -21,7 +42,7 @@ section{
 .overlay {
     width: 100vw;
     height: 100vh;
-/*   background-color: rgba(255, 255, 255, 0.5);*/
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .nav-dark {
@@ -32,6 +53,11 @@ section{
 .btn {
     font-weight: 900;
 /* background-color: #7B7162; */
+}
+
+.save {
+    margin-left: 12rem;
+    margin-top: 2rem;
 }
 
 /* .btn-dark:hover, .finish-dark:hover { */

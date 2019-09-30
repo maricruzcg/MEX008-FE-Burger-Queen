@@ -1,14 +1,13 @@
 import React from 'react';
 import Nav from "../components/Navbar";
-//import Tips from "../components/Tips";
 import Boxtip from "../components/Boxtip"
+
 const Home = () => {
     return (
-        <section className={"bg-soft"}>
+        <section className={"vb"}>
             <div className={"overlay"}>
             <Nav />
             <Boxtip footerText="ABRIR ORDEN"/>
-             {/* <Tips  footerText="ABRIR ORDEN"/> */}
             </div>    
         </section>
     );

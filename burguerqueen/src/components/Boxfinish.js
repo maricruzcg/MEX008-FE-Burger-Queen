@@ -1,7 +1,10 @@
 import React from 'react';
-import { ListGroup, ListGroupItem, Table } from 'reactstrap';
+import { Table } from 'reactstrap';
 
 import Btn from "./Btn";
+
+import { UserConsumer } from '../UserContext'
+
 
 class Boxfinish extends React.Component {
     constructor() {
@@ -9,7 +12,7 @@ class Boxfinish extends React.Component {
         this.state = {
         client: {
             name: '',
-            order: '',
+            order: ''
         }
         };
     }
@@ -18,6 +21,18 @@ componentDidMount() {
     this.setState({
         client: {
         name: localStorage.getItem('myData').toUpperCase(),
+        order: [
+            {
+                product: "SOBERBIA",
+                price: "55",
+                quantity: "1"
+            },
+            {
+                product: "MALICIA",
+                price: "65",
+                quantity: "1"
+            }
+        ]
         }
     })
 }
@@ -25,28 +40,32 @@ componentDidMount() {
 
     render() {
         return (
+            <UserConsumer>
+                        {props => {
+
+          return (
           <div className={"card bg-light"} >
           <div className="btn btn-dark btn-lg btn-block box-header">ORDEN DE: <p>{this.props.clientName}</p>
               </div>
                   <div className="card-body">
-                  <Table>
+                  <Table striped>
         <thead>
           <tr>
             <th>#</th>
             <th>Item</th>
             <th>Costo</th>
-            <th>Más</th>
+            <th>Cantidad</th>
           </tr>
         </thead>
         <tbody>
          {
              this.state.client.order ? 
-             this.state.client.order(item => (            
-                <tr>
-                <th scope="row"></th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
+             this.state.client.order.map((item,i) => (            
+                <tr key={i}>
+                <th scope="row">{i + 1}</th>
+                <td>{item.product}</td>
+                <td>{item.price}</td>
+                <td>{item.quantity}</td>
               </tr>
           )) :
           <tr>
@@ -57,7 +76,6 @@ componentDidMount() {
         </tr>
         } 
         </tbody>
-
       </Table>
 
                   </div>
@@ -66,6 +84,10 @@ componentDidMount() {
                   <Btn text={this.props.footerText} class="btn finish-dark og-hover" />
                   </div>
               </div>
+
+          )
+        }}
+              </UserConsumer>
           )
     }
 };

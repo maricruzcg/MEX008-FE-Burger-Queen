@@ -41,8 +41,8 @@ componentDidMount(){
         return(
           <DropdownMenu>
   {    
-    this.state.menu.POSTRES.map( item => 
-          <DropdownItem>  <Badge color="dark" pill>{item}</Badge>  </DropdownItem>
+    this.state.menu.POSTRES.map( (item,i) => 
+          <DropdownItem key={i}>  <Badge color="dark" pill>{item}</Badge>  </DropdownItem>
       ) 
       }
       </DropdownMenu>    
@@ -54,18 +54,17 @@ componentDidMount(){
           <div>
           <DropdownMenu>
   {    
-    Object.keys(this.state.menu.COMIDA).map( subsection => 
-          <DropdownItem data-subsection={subsection}>  <Badge color="dark" data-subsection={subsection} pill>{subsection}</Badge>  </DropdownItem>
+    Object.keys(this.state.menu.COMIDA).map( (subsection, i )=> 
+          <DropdownItem  key={i} data-subsection={subsection}>  <Badge color="dark" data-subsection={subsection} pill>{subsection}</Badge>  </DropdownItem>
       ) 
       }
       </DropdownMenu>
       
       <DropdownMenu>
       {    
-        Object.keys(this.state.menu.COMIDA).map( subsection => 
+        Object.keys(this.state.menu.COMIDA).map( (subsection,i) => 
           
-              <ItemDrop menu={this.state.menu.COMIDA[subsection]} prices={this.state.prices} subsection={subsection} /* isOpen={this.state.dropdownOpen} */ /* toggle={this.toggle} */ /* typefood={this.state.typeFood}*/ />
-              // <DropdownItem data-subsection={subsection}>  <Badge color="dark" data-subsection={subsection} pill>{subsection}</Badge>  </DropdownItem>
+              <ItemDrop key={i}  menu={this.state.menu.COMIDA[subsection]} prices={this.state.prices} subsection={subsection} /* isOpen={this.state.dropdownOpen} */ /* toggle={this.toggle} */ /* typefood={this.state.typeFood}*/ />
           ) 
           }
           </DropdownMenu> 
@@ -78,17 +77,17 @@ componentDidMount(){
               <div>
               <DropdownMenu>
       {    
-        Object.keys(this.state.menu.BEBIDAS).map( subsection => 
-              <DropdownItem data-subsection={subsection}>  <Badge color="dark" data-subsection={subsection} pill>{subsection}</Badge>  </DropdownItem>
+        Object.keys(this.state.menu.BEBIDAS).map( (subsection,i) => 
+              <DropdownItem key={i} data-subsection={subsection}>  <Badge color="dark" data-subsection={subsection} pill>{subsection}</Badge>  </DropdownItem>
           ) 
           }
           </DropdownMenu>
           
           <DropdownMenu>
           {    
-            Object.keys(this.state.menu.BEBIDAS).map( subsection => 
+            Object.keys(this.state.menu.BEBIDAS).map( (subsection,i) => 
               
-                  <ItemDrop menu={this.state.menu.BEBIDAS[subsection]} prices={this.state.prices} subsection={subsection} /* isOpen={this.state.dropdownOpen} */ /* toggle={this.toggle} */ /* typefood={this.state.typeFood}*/ />
+                  <ItemDrop key={i} menu={this.state.menu.BEBIDAS[subsection]} prices={this.state.prices} subsection={subsection} /* isOpen={this.state.dropdownOpen} */ /* toggle={this.toggle} */ /* typefood={this.state.typeFood}*/ />
                   // <DropdownItem data-subsection={subsection}>  <Badge color="dark" data-subsection={subsection} pill>{subsection}</Badge>  </DropdownItem>
               ) 
               }

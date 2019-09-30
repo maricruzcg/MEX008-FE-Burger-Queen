@@ -41,7 +41,7 @@ class FormUI extends React.Component {
           <Col sm={10}>
             <Input type="text" value={this.state.client.name} name={this.props.name} id={this.props.id} placeholder={this.props.placeholder} bsSize="lg" onChange={e => this.onChange(e)} required/>
           </Col>
-          <Button type="submit" className={"btn btn-dark"}   onClick={this.handleClick.bind(this)}>GUARDAR</Button>
+          <Button type="submit" className={"btn btn-dark save"}   onClick={this.handleClick.bind(this)}>GUARDAR</Button>
       </Form>
     );
   }

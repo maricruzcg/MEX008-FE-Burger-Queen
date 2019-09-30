@@ -25,38 +25,12 @@ componentDidMount(){
     subsection: this.props.subsection
 })
 
-this.state.menu ?
-console.log(this.state.menu):
-console.log('no se ha guardado menu en DID');
-
 }
 
 
 
 render() {
-    this.state.menu ?
-    console.log(this.state.menu):
-    console.log('no se ha guardado menu en RENDER');
-
-
     const {menu, subsection} = this.state;
-
-//    const newObj = menu[{typeFood}][{subsection}];
-
-/*        const  createItem = (section, sub) => {
-        
-            return(
-                <DropdownMenu>
-        {    
-          newObj.map( item => 
-                <DropdownItem data-item={item}>  <Badge color="dark" data-item={item} pill>{item}</Badge>  </DropdownItem>
-            ) 
-            }
-            </DropdownMenu>    
-                 )
-        }  */
-
-   // const item = createItem(typeFood,subsection);
 
     if (!subsection || !menu ) {
       return (<DropdownMenu>
@@ -64,14 +38,13 @@ render() {
   </DropdownMenu>) 
 
     } else {
-
       //console.log(subsection);
       
         return(
              <DropdownMenu>
             {    
-              menu.map( item => 
-                    <DropdownItem data-item={item}>  <Badge color="dark" data-item={item} pill>{item}</Badge>  </DropdownItem>
+              menu.map( (item,i) => 
+                    <DropdownItem key={i} data-item={item}>  <Badge color="dark" data-item={item} pill>{item}</Badge>  </DropdownItem>
                 ) 
                 }
                 </DropdownMenu>    

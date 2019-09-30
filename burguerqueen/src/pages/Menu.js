@@ -2,8 +2,11 @@ import React from 'react';
 
 import Nav from "../components/Navbar"
 import Boxfinish from "../components/Boxfinish"
-import { ButtonDropdown, DropdownToggle, CardImg, DropdownItem, DropdownMenu, Badge } from 'reactstrap';
+import { ButtonDropdown, DropdownToggle, CardImg} from 'reactstrap';
 import ItemDropdown from "../components/ItemDropdown"
+
+import { UserProvider } from '../UserContext'
+
 
 //import Img from "../assets"
 /* 
@@ -47,7 +50,7 @@ class Menu extends React.Component {
           dropdownOpen: !this.state.dropdownOpen,
           typeFood: typeData
         });   
-        console.log(this.state.typeFood);
+       // console.log(this.state.typeFood);
           
       }   
 
@@ -65,7 +68,6 @@ componentDidMount() {
             menu: data.MENU,
             img: data.IMG,
             prices: data.PRICES
-
         })
      //   console.log(data.MENU);        
     });
@@ -77,32 +79,37 @@ componentDidMount() {
     })
 }
 
-render(){
+
+
+render() {
+  const {name} = this.state.client;
+  const order = { name: {name}}
+
+
      if(!this.state.menu.BEBIDAS){
     return (
         <p>Loading...</p>
     )
     } else { 
    //console.log(this.state.img.COMIDA);
-
    //const {COMIDA, BEBIDAS, POSTRES} = this.state.img;
-
      
     return (
+      <UserProvider>
         <section className={"bg-soft"}>
             <div className={"overlay"}>
             <Nav />    
             <Boxfinish clientName={this.state.client.name} footerText="FINALIZAR"/>  
             {
       //       this.state.menu ? 
-    Object.keys(this.state.menu).map(element => (
-      <ButtonDropdown data-typefood={element} className={"menu-icon"} isOpen={this.state.dropdownOpen} toggle={this.toggle}>
+    Object.keys(this.state.menu).map((element, i) => (
+      <ButtonDropdown key={i} data-typefood={element} className={"menu-icon"} isOpen={this.state.dropdownOpen} toggle={this.toggle}>
       <DropdownToggle caret>
           <CardImg  data-typefood={element} bottom width="87px" height="87px" src={require('../assets/plate.png')} alt={element}/>
             <p  data-typefood={element} /* onClick={() => setTypeFood(element)} */ >{element}</p>
       </DropdownToggle>
 
-<ItemDropdown typefood={element} menu={this.state.menu} prices={this.state.prices} /* isOpen={this.state.dropdownOpen} */ /* toggle={this.toggle} */ /* typefood={this.state.typeFood} *//>
+<ItemDropdown key={i}  typefood={element} menu={this.state.menu} prices={this.state.prices} /* isOpen={this.state.dropdownOpen} */ /* toggle={this.toggle} */ /* typefood={this.state.typeFood} *//>
 </ButtonDropdown>
 
         )) 
@@ -114,6 +121,7 @@ render(){
 
             </div>
         </section>
+        </UserProvider>
     );
   }
 }

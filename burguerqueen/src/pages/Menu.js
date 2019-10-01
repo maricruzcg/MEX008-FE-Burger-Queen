@@ -5,7 +5,7 @@ import Boxfinish from "../components/Boxfinish"
 import { ButtonDropdown, DropdownToggle, CardImg} from 'reactstrap';
 import ItemDropdown from "../components/ItemDropdown"
 
-import { UserProvider } from '../UserContext'
+import { OrderProvider } from '../UserContext'
 
 
 //import Img from "../assets"
@@ -52,7 +52,11 @@ class Menu extends React.Component {
         });   
        // console.log(this.state.typeFood);
           
-      }   
+      }  
+      
+      addItem(e) {
+
+      }
 
 /*      setTypeFood(e) {
         this.setState({
@@ -83,7 +87,12 @@ componentDidMount() {
 
 render() {
   const {name} = this.state.client;
-  const order = { name: {name}}
+  const client = { 
+    name: {name},
+    order: {
+      
+    }
+}
 
 
      if(!this.state.menu.BEBIDAS){
@@ -95,7 +104,7 @@ render() {
    //const {COMIDA, BEBIDAS, POSTRES} = this.state.img;
      
     return (
-      <UserProvider>
+      <OrderProvider value={client}>
         <section className={"bg-soft"}>
             <div className={"overlay"}>
             <Nav />    
@@ -121,7 +130,7 @@ render() {
 
             </div>
         </section>
-        </UserProvider>
+        </OrderProvider>
     );
   }
 }

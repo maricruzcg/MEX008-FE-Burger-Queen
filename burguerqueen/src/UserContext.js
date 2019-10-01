@@ -1,11 +1,12 @@
 import React from 'react'
 
-const UserContext = React.createContext({
-    client:'',
-    toggleUser: () => {},
-
+const OrderContext = React.createContext({
+    client:{
+        name:'',
+        order:''
+    },
 })
 
-export const UserProvider = UserContext.Provider
-export const UserConsumer = UserContext.Consumer
-export default UserContext
+export const OrderProvider = OrderContext.Provider
+export const OrderConsumer = OrderContext.Consumer
+export default OrderContext

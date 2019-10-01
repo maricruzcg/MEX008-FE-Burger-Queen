@@ -7,7 +7,7 @@
     "filename": "favicon.ico",
     "src": "favicon.ico",
     "idiom": "ios-marketing mac ipad iphone",
-    "scale": "1x 2x 2x 3x   "
+    "scale": "1x 2x 2x 3x"
   }],
   "start_url": ".",
   "display": "standalone",

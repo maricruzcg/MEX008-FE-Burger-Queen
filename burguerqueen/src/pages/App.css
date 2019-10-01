@@ -207,3 +207,7 @@ background-color: #f8f9fa !important;
     border-color: #60DE5D;
     color: black;
 }
+
+.order-kitchen{
+    flex-direction: column;
+}

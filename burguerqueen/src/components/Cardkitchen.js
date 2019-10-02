@@ -22,6 +22,14 @@ class Cardkitchen extends React.Component{
       </thead>
       <tbody>
       <tr>
+          <th scope="row">4</th>
+          <td>ENRIQUE</td>
+          <td>1</td>
+          <td>SOBERBIA</td>
+          <td>13:00</td>
+          <td>00:00</td>
+        </tr>
+      <tr>
           <th scope="row">3</th>
           <td>MARIANA</td>
           <td>1</td>
@@ -49,7 +57,19 @@ class Cardkitchen extends React.Component{
 
       </Table>
 
+    
+      <Table bordered>
+        <thead>
+          <tr>
+            <th>RECIBIDO</th>
+            <th className="p-3 mb-2 bg-success text-white">EN PROCESO</th>
+            <th className="p-3 mb-2 bg-secondary text-white">SERVIDO</th>
+          </tr>
+        </thead>
+      </Table>
+    
     </div>
+    
 
 
 

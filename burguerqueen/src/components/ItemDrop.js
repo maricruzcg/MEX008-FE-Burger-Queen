@@ -24,7 +24,6 @@ componentDidMount(){
     prices: this.props.prices,
     subsection: this.props.subsection
 })
-
 }
 
 

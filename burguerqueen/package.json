@@ -18,7 +18,8 @@
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.1.1",
     "reactstrap": "^8.0.1",
-    "request": "^2.88.0"
+    "request": "^2.88.0",
+    "serve": "^11.2.0"
   },
   "scripts": {
     "start": "node server",

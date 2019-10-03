@@ -27,9 +27,15 @@ componentDidMount(){
 })
 }
 
+ console (e) {
+   e.preventDefault();
+   console.log('hola2');
+ }
 
   render() {
-    const {typeFood, menu, prices} = this.state;
+
+    const {typeFood, menu} = this.state;
+ //   const addItem = this.props.addItem();
     if (!typeFood || !menu ) {
       return (<DropdownMenu>
         <DropdownItem>  <Badge color="dark" pill>No hay dataFood</Badge>  </DropdownItem>
@@ -38,29 +44,29 @@ componentDidMount(){
       //console.log(typeFood);
       
       if (typeFood === "POSTRES") {
+
         return(
-          <DropdownMenu>
-  {    
-    this.state.menu.POSTRES.map( (item,i) => 
-          <DropdownItem key={i}>  <Badge color="dark" pill>{item}</Badge>  </DropdownItem>
-      ) 
-      }
-      </DropdownMenu>    
-           )
-           }
-    
+          <DropdownMenu persist={true}>
+
+        { this.state.menu.POSTRES.map( (item,i) => ( 
+          <DropdownItem key={`postres-items-${i}`}>  
+            <div onClick={()=>console.log("adlkad")}>
+              <Badge color="dark" onClick={()=>this.addItem} pill>{item}</Badge>  
+            </div>
+          </DropdownItem>
+        ))}
+      </DropdownMenu>
+      )
+          }
       if (typeFood === "COMIDA") {
         return(
-          <div>
+          <div className={"transparent"}>
           <DropdownMenu>
   {    
     Object.keys(this.state.menu.COMIDA).map( (subsection, i )=> 
           <DropdownItem  key={i} data-subsection={subsection}>  <Badge color="dark" data-subsection={subsection} pill>{subsection}</Badge>  </DropdownItem>
       ) 
       }
-      </DropdownMenu>
-      
-      <DropdownMenu>
       {    
         Object.keys(this.state.menu.COMIDA).map( (subsection,i) => 
           
@@ -81,9 +87,6 @@ componentDidMount(){
               <DropdownItem key={i} data-subsection={subsection}>  <Badge color="dark" data-subsection={subsection} pill>{subsection}</Badge>  </DropdownItem>
           ) 
           }
-          </DropdownMenu>
-          
-          <DropdownMenu>
           {    
             Object.keys(this.state.menu.BEBIDAS).map( (subsection,i) => 
               

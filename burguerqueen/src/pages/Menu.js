@@ -44,7 +44,7 @@ class Menu extends React.Component {
 
       this.setState({
           client: {
-          name: localStorage.getItem('myData').toUpperCase(),
+          name: localStorage.getItem('myData').toUpperCase()
           }
       })
   }

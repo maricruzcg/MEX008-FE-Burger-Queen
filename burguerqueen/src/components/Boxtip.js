@@ -1,5 +1,5 @@
 import React from 'react';
-import { ListGroup, ListGroupItem } from 'reactstrap';
+import { Table } from 'reactstrap';
 import ModalUI from './Modal';
 
 
@@ -22,13 +22,27 @@ componentDidMount() {
 }
 
   render() {
-      console.log(this.state.recommendations);
-      
+    //  console.log(this.state.recommendations);      
     return (
         <div className={"card bg-light"} >
-        <div className="btn btn-dark btn-lg btn-block box-header">RECOMENDACIONES </div>
+        <div className="btn btn-dark btn-lg btn-block box-header">RECOMENDACIONES</div>
         <div className="card-body">
-      <ListGroup>
+          <Table striped>
+        <tbody>
+         {
+             this.state.recommendations ? 
+             this.state.recommendations.map((recommendation,i) => (            
+                <tr key={i}>
+                <td>{recommendation}</td>
+              </tr>
+          )) :
+          <tr>
+          <td> No hay recomendaciones</td>
+        </tr>
+        } 
+        </tbody>
+      </Table>
+{/*       <ListGroup>
          {
              this.state.recommendations ? 
              this.state.recommendations.map(recommendation => (            
@@ -36,12 +50,11 @@ componentDidMount() {
           )) :
           <div>No hay recomendaciones</div>
         } 
-      </ListGroup>
+      </ListGroup> */}
       </div>
 <div className="card-footer text-muted d-flex justify-content-center footer-dark">
 <ModalUI class="btn finish-dark og-hover" buttonLabel={this.props.footerText} title="¿A QUÉ NOMBRE VA A QUEDAR LA ORDEN?"/>
       </div>
-
 </div>
     );
   }

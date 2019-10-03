@@ -48,8 +48,14 @@ componentDidMount(){
           //onClick={()=>this.props.addItem([item])}
           this.state.menu.POSTRES.map( (item,i) => ( 
           <DropdownItem key={`postres-items-${i}`}>  
-              <div onClick={() => console.log('Hola desde div')}>
-              <Badge color="dark" onClick={() => console.log('Hola desde badge')}  pill>{item}</Badge>  
+              <div onClick={(e) => {
+                   e.preventDefault();
+                   console.log('Hola desde div')}
+                   }>
+              <Badge color="dark" onClick={(e) =>  {  
+              e.preventDefault();
+                console.log('Hola desde badge')}
+                }  pill>{item}</Badge>  
               </div>
           </DropdownItem>
         ))}

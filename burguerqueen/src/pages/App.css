@@ -3,11 +3,20 @@ body{
 }
 
 .img-log{
-margin:10px auto;
-display:block; 
-width: 25%
+    margin:10px auto;
+    display:block; 
+    width: 25%
 }
 .btn-login{
+    position:absolute; 
+    width:200px; left:43%;
+    text-align:center;  
+}
+.form-in{
+    text-align: center;
+    margin: 1rem;
+    padding: 2rem;
+    border: 100px
 
 }
 section{

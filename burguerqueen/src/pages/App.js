@@ -13,14 +13,11 @@ class App extends Component {
   render() {
     return (
         <Switch>
-            <Route path="/Login" component={Login}/>
-            <Route exact path="/" component={GetIn}/>
-            <Route path="/Menu" component={Home} />
+            <Route exact path="/" component={Home} />
             <Route path="/Menu" component={Menu} />
-
-
+            <Route path="/Login" component={Login}/>
+            <Route path="/Get" component={GetIn}/>
             <Route path="/Kitchen" component={Kitchen} />
-
 
             <Route path="*" component={Error} />
         </Switch>

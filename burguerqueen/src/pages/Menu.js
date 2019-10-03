@@ -113,12 +113,10 @@ render() {
         <section className={"bg-soft"}>
             <Nav />    
             <Boxfinish clientName={this.state.client.name} footerText="FINALIZAR"/> 
-            <Button onClick={() => console.log('holaaaa')}>hola</Button> 
-
             {
       //       this.state.menu ? 
     Object.keys(this.state.menu).map((element, i) => (
-      <ButtonDropdown key={i} data-typefood={element} className={"menu-icon"} isOpen={this.state.dropdownOpen} toggle={this.toggle} group={false}>
+      <ButtonDropdown key={i} data-typefood={element} className={"menu-icon"} isOpen={this.state.dropdownOpen} toggle={this.toggle}>
       <DropdownToggle caret>
           <CardImg  data-typefood={element} bottom width="87px" height="87px" src={img[this.state.img[element]]} alt={element}/>
             <p  data-typefood={element}>{element}</p>

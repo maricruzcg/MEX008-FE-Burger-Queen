@@ -9,7 +9,7 @@ const Login=()=>{
     <seccion className={"login"}>
       <div>
         <img className="img-log" src={mesereando}/>
-      <Button className="btn-login" color="secondary">INICIAR SESIÓN</Button>
+      <Button className="btn-login" color="secondary">INICIA SESIÓN</Button>
         </div>
      </seccion>
      );

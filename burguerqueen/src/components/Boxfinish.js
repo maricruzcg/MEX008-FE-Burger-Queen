@@ -42,7 +42,11 @@ componentDidMount() {
         return (
             <ClientConsumer>
                         {props => {
-                            
+        const client = props.client;
+
+        // this.setState({
+        //     client: client
+        // })
 
           return (
           <div className={"card bg-light"} >

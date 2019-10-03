@@ -27,7 +27,7 @@ section{
     background-image: url(../imgFED/imagebackground.png);  
     background-position: center;
     background-repeat: no-repeat;
-    /* background-size: cover;  */
+    background-size: cover; 
 }
 
 .slate{

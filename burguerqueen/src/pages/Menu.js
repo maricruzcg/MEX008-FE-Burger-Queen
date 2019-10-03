@@ -91,19 +91,6 @@ render(){
     return (
         <section className={"bg-soft"}>
             <div className={"overlay"}>
-<<<<<<< HEAD
-                <Nav />
-                <Boxfinish footerText="FINALIZAR" />
-                <Dropdown icon={Food} text="COMIDA" alt="plato"
-                    iconMenu={Hamburguer} altMenu="hamburguer"
-                    iconMenu1={Salad} altMenu1="salad"
-                    iconMenu2={Hotdog} altMenu2="hotdog"
-                    iconMenu3={Pizza} altMenu3="pizza" />
-                <Dropdown icon={Drinks} text="BEBIDAS" alt="bebida" />
-                <Dropdown icon={Desserts} text="POSTRES" alt="postre" />
-
-                <Dropdowndrinks />
-=======
             <Nav />    
             <Boxfinish clientName={this.state.client.name} footerText="FINALIZAR"/>  
             {
@@ -125,7 +112,6 @@ render(){
         <div>Fallo al cargar data</div> */       
     }
 
->>>>>>> origin/master
             </div>
         </section>
     );

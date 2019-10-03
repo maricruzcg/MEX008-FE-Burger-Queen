@@ -25,7 +25,7 @@ componentDidMount() {
     //  console.log(this.state.recommendations);      
     return (
         <div className={"card bg-light"} >
-        <div className="btn btn-dark btn-lg btn-block box-header">RECOMENDACIONES </div>
+        <div className="btn btn-dark btn-lg btn-block box-header">RECOMENDACIONES</div>
         <div className="card-body">
           <Table striped>
         <tbody>

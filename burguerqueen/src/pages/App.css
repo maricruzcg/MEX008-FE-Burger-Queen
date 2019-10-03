@@ -2,6 +2,23 @@ body{
     font-family: 'Roboto', sans-serif !important;
 }
 
+.img-log{
+    margin:10px auto;
+    display:block; 
+    width: 25%
+}
+.btn-login{
+    position:absolute; 
+    width:200px; left:43%;
+    text-align:center;  
+}
+.form-in{
+    text-align: center;
+    margin: 1rem;
+    padding: 2rem;
+    border: 100px
+
+}
 section{
     height: 100vh;
 }
@@ -211,4 +228,8 @@ background-color: #f8f9fa !important;
     background-color: #60DE5D;
     border-color: #60DE5D;
     color: black;
+}
+
+.order-kitchen{
+    flex-direction: column;
 }

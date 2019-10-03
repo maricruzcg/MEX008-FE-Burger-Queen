@@ -26,7 +26,7 @@ class Menu extends React.Component {
 
       dropdownOpen: false,
 
-      typeFood: 'POSTRES'
+      typeFood: ''
         };
     }
 
@@ -117,7 +117,7 @@ render() {
       //       this.state.menu ? 
     Object.keys(this.state.menu).map((element, i) => (
       <ButtonDropdown key={i} data-typefood={element} className={"menu-icon"} isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-      <DropdownToggle caret>
+      <DropdownToggle caret onClick={() => {this.setTypeFood(element)}}>
           <CardImg  data-typefood={element} bottom width="87px" height="87px" src={img[this.state.img[element]]} alt={element}/>
             <p  data-typefood={element}>{element}</p>
       </DropdownToggle>
@@ -126,11 +126,7 @@ render() {
       ""
       }
       </ButtonDropdown>
-    )) 
-
-        
-                /*         :
-        <div>Fallo al cargar data</div> */       
+    ))     
     }
 
         </section>

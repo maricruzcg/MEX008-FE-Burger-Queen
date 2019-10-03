@@ -3,7 +3,7 @@ import { Table } from 'reactstrap';
 
 import Btn from "./Btn";
 
-import { UserConsumer } from '../UserContext'
+import { ClientConsumer } from '../ClientContext'
 
 
 class Boxfinish extends React.Component {
@@ -40,8 +40,9 @@ componentDidMount() {
 
     render() {
         return (
-            <UserConsumer>
+            <ClientConsumer>
                         {props => {
+                            
 
           return (
           <div className={"card bg-light"} >
@@ -87,7 +88,7 @@ componentDidMount() {
 
           )
         }}
-              </UserConsumer>
+              </ClientConsumer>
           )
     }
 };

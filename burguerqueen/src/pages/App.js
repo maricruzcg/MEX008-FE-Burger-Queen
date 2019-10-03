@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
-import { HashRouter, Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import Home from '../pages/Home';
 import Menu from '../pages/Menu';
 import Login from '../pages/Login';
 import GetIn from '../pages/GetIn';
 import Kitchen from '../pages/Kitchen';
+import Error from '../pages/Error404';
 import './App.css';
 
 
 class App extends Component {
   render() {
     return (
-        <HashRouter>
-            <Route path="/Home" component={Home} />
+        <Switch>
+            <Route exact path="/" component={Home} />
             <Route path="/Menu" component={Menu} />
 
             <Route path="/Login" component={Login}/>
@@ -20,7 +21,10 @@ class App extends Component {
 
             <Route path="/Kitchen" component={Kitchen} />
 
-        </HashRouter>
+
+            <Route path="*" component={Error} />
+        </Switch>
+
     );
   }
 }

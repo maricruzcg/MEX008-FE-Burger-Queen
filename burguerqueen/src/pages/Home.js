@@ -4,7 +4,7 @@ import Boxtip from "../components/Boxtip"
 
 const Home = () => {
     return (
-        <section className={"vb"}>
+        <section className={"burguer"}>
             <div className={"overlay"}>
             <Nav />
             <Boxtip footerText="ABRIR ORDEN"/>

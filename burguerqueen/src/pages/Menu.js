@@ -2,13 +2,12 @@ import React from 'react';
 
 import Nav from "../components/Navbar"
 import Boxfinish from "../components/Boxfinish"
-import { ButtonDropdown, DropdownToggle, CardImg} from 'reactstrap';
+import { ButtonDropdown, DropdownToggle, CardImg, Button} from 'reactstrap';
 import ItemDropdown from "../components/ItemDropdown"
 
-import { UserProvider } from '../UserContext'
+import { ClientProvider } from '../ClientContext'
 
-
-//import Img from "../assets"
+import img from "../assets"
 /* 
 import ImgCOMIDA from "../assets/plate.png"
 import ImgBEBIDAS from "../assets/drink.png"
@@ -33,15 +32,33 @@ class Menu extends React.Component {
         prices: '',
         client: {
             name: '',
+            order: [],
         },
 
       dropdownOpen: false,
 
-      typeFood: 'COMIDA'
-
+      typeFood: ''
         };
     }
 
+    componentDidMount() {
+      fetch('./data/Menu.json')
+      .then(response => response.json())
+      .then(data => {
+          this.setState({
+              menu: data.MENU,
+              img: data.IMG,
+              prices: data.PRICES
+          })
+       //   console.log(data.MENU);        
+      });
+  
+      this.setState({
+          client: {
+          name: localStorage.getItem('myData').toUpperCase(),
+          }
+      })
+  }
 
      toggle(e) {
      //   console.log(e.target.dataset.typefood);
@@ -52,38 +69,41 @@ class Menu extends React.Component {
         });   
        // console.log(this.state.typeFood);
           
-      }   
+      }  
 
-/*      setTypeFood(e) {
+      setTypeFood(element) {
         this.setState({
-          typeFood: e.target.dataset.typeFood
+          typeFood: element
         });     
-      }   */ 
-
-componentDidMount() {
-    fetch('./data/Menu.json')
-    .then(response => response.json())
-    .then(data => {
-        this.setState({
-            menu: data.MENU,
-            img: data.IMG,
-            prices: data.PRICES
-        })
-     //   console.log(data.MENU);        
-    });
-
-    this.setState({
-        client: {
-        name: localStorage.getItem('myData').toUpperCase(),
-        }
-    })
-}
-
+      } 
+      
+      addItem(item) {
+        console.log('addItem', item);
+        
+      //   const newProduct = {
+      //     item: item,
+      //     quantity: 1,
+      //     price: this.state.prices.item
+      //   };
+        
+      // const orderStart = this.state.client.order;
+      // orderStart.push(newProduct);
+      
+      //   this.setState({
+      //     client: {
+      //       name: localStorage.getItem('myData').toUpperCase(),
+      //       order: orderStart
+      //       }
+      //   });      
+      }
 
 
 render() {
-  const {name} = this.state.client;
-  const order = { name: {name}}
+  const {name, order} = this.state.client;
+  const client = { 
+    name: {name},
+    order: {order}
+}
 
 
      if(!this.state.menu.BEBIDAS){
@@ -91,37 +111,36 @@ render() {
         <p>Loading...</p>
     )
     } else { 
-   //console.log(this.state.img.COMIDA);
+   
    //const {COMIDA, BEBIDAS, POSTRES} = this.state.img;
      
     return (
-      <UserProvider>
+      <ClientProvider value={client}>
         <section className={"bg-soft"}>
-            <div className={"overlay"}>
             <Nav />    
-            <Boxfinish clientName={this.state.client.name} footerText="FINALIZAR"/>  
+            <Boxfinish clientName={this.state.client.name} footerText="FINALIZAR"/> 
             {
       //       this.state.menu ? 
     Object.keys(this.state.menu).map((element, i) => (
-      <ButtonDropdown key={i} data-typefood={element} className={"menu-icon"} isOpen={this.state.dropdownOpen} toggle={this.toggle}>
+      <ButtonDropdown key={i} data-typefood={element} className={"menu-icon"} isOpen={this.state.dropdownOpen} toggle={this.toggle} onClick={() => this.setTypeFood(element)} >
       <DropdownToggle caret>
-          <CardImg  data-typefood={element} bottom width="87px" height="87px" src={require('../assets/plate.png')} alt={element}/>
-            <p  data-typefood={element} /* onClick={() => setTypeFood(element)} */ >{element}</p>
+          <CardImg  data-typefood={element} bottom width="87px" height="87px" src={img[this.state.img[element]]} alt={element} onClick={() => this.setTypeFood(element)} />
+            <p  data-typefood={element} onClick={() => this.setTypeFood(element)} >{element}</p>
       </DropdownToggle>
-
-<ItemDropdown key={i}  typefood={element} menu={this.state.menu} prices={this.state.prices} /* isOpen={this.state.dropdownOpen} */ /* toggle={this.toggle} */ /* typefood={this.state.typeFood} *//>
-</ButtonDropdown>
-
-        )) 
+      {(this.state.typeFood && this.state.typeFood == element) ?
+      <ItemDropdown key={i}  typefood={this.state.typeFood} menu={this.state.menu} prices={this.state.prices}  addItem={this.addItem}/* isOpen={this.state.dropdownOpen} */ /* toggle={this.toggle} */ /* typefood={this.state.typeFood} *//> :
+      ""
+      }
+      </ButtonDropdown>
+    )) 
 
         
                 /*         :
         <div>Fallo al cargar data</div> */       
     }
 
-            </div>
         </section>
-        </UserProvider>
+        </ClientProvider>
     );
   }
 }

@@ -6,7 +6,6 @@ import ItemDrop from "../components/ItemDrop"
 export default class ItemDropdown extends React.Component {
   constructor() {
     super();
-//this.toggle = this.toggle.bind(this);
 
     this.state = {
 menu: '',
@@ -47,16 +46,10 @@ componentDidMount(){
         { 
           //onClick={()=>this.props.addItem([item])}
           this.state.menu.POSTRES.map( (item,i) => ( 
-          <DropdownItem key={`postres-items-${i}`}>  
-              <div onClick={(e) => {
-                   e.preventDefault();
-                   console.log('Hola desde div')}
-                   }>
-              <Badge color="dark" onClick={(e) =>  {  
-              e.preventDefault();
-                console.log('Hola desde badge')}
-                }  pill>{item}</Badge>  
-              </div>
+          <DropdownItem key={`postres-items-${i}`} toggle={false} onClick={() => console.log(`Hola desde ${item}`)}>  
+              
+              <Badge color="dark" pill>{item}</Badge>  
+              
           </DropdownItem>
         ))}
       </DropdownMenu>

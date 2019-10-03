@@ -24,9 +24,9 @@ class Menu extends React.Component {
             order: [],
         },
 
-      dropdownOpen: false,
+      dropdownOpen: {},
 
-      typeFood: 'POSTRES'
+      typeFood: ''
         };
     }
 
@@ -57,38 +57,33 @@ class Menu extends React.Component {
       } 
       
 
-      toggle(e) {
-      // const data= e.target.dataset.typefood;
-       // this.setTypeFood(data);
-        console.log('toggle', this.state.typeFood);
-        
-        // this.state.typeFood ?
-        // (
+      toggle(element) {
           this.setState({
-                  dropdownOpen: !this.state.dropdownOpen
+                  dropdownOpen: {
+                    ...!this.state.dropdownOpen,
+                  [element]: !this.state.dropdownOpen[element],
+                }
                 }) 
-        //         ) :
-        // this.setTypeFood(data);
       };
 
       addItem(item) {
         console.log('addItem', item);
         
-      //   const newProduct = {
-      //     item: item,
-      //     quantity: 1,
-      //     price: this.state.prices.item
-      //   };
+        const newProduct = {
+          item: item,
+          quantity: 1,
+          price: this.state.prices.item
+        };
         
-      // const orderStart = this.state.client.order;
-      // orderStart.push(newProduct);
+      const orderStart = this.state.client.order;
+      orderStart.push(newProduct);
       
-      //   this.setState({
-      //     client: {
-      //       name: localStorage.getItem('myData').toUpperCase(),
-      //       order: orderStart
-      //       }
-      //   });      
+        this.setState({
+          client: {
+            name: localStorage.getItem('myData').toUpperCase(),
+            order: orderStart
+            }
+        });      
       }
 
 
@@ -109,32 +104,28 @@ render() {
    //const {COMIDA, BEBIDAS, POSTRES} = this.state.img;
      
     return (
-      <ClientProvider value={client}>
+       <ClientProvider value={client}>
         <section className={"bg-soft"}>
             <Nav />    
             <Boxfinish clientName={this.state.client.name} footerText="FINALIZAR"/> 
             {
-      //       this.state.menu ? 
     Object.keys(this.state.menu).map((element, i) => (
-      <ButtonDropdown key={i} data-typefood={element} className={"menu-icon"} isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-      <DropdownToggle caret>
+      <ButtonDropdown key={i} data-typefood={element} className={"menu-icon"} isOpen={this.state.dropdownOpen[element]} toggle={() => this.toggle(element)}>
+      <DropdownToggle caret onClick={() => {this.setTypeFood(element)}}>
           <CardImg  data-typefood={element} bottom width="87px" height="87px" src={img[this.state.img[element]]} alt={element}/>
             <p  data-typefood={element}>{element}</p>
       </DropdownToggle>
-      {(this.state.typeFood && this.state.typeFood === element) ?
-      <ItemDropdown key={i}  typefood={this.state.typeFood} menu={this.state.menu} prices={this.state.prices.element}/> :
+      <ItemDropdown key={i}  typefood={element} menu={this.state.menu} prices={this.state.prices.element} addItem={this.addItem}/> 
+      {/* {(this.state.typeFood && this.state.typeFood === element) ?
+      <ItemDropdown key={i}  typefood={element} menu={this.state.menu} prices={this.state.prices.element}/> :
       ""
-      }
+      } */}
       </ButtonDropdown>
-    )) 
-
-        
-                /*         :
-        <div>Fallo al cargar data</div> */       
+    ))     
     }
 
         </section>
-        </ClientProvider>
+     </ClientProvider>
     );
   }
 }

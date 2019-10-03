@@ -11,8 +11,8 @@ export default class ItemDropdown extends React.Component {
     this.state = {
 menu: '',
 prices: '', 
-
-typeFood: ''
+typeFood: '',
+subsection: ''
     };
 }
 
@@ -22,8 +22,7 @@ componentDidMount(){
   this.setState({
     menu: this.props.menu,
     prices: this.props.prices,
-
-    typeFood: this.props.typefood
+    typeFood: this.props.typefood,
 })
 }
 
@@ -41,18 +40,17 @@ componentDidMount(){
         <DropdownItem>  <Badge color="dark" pill>No hay dataFood</Badge>  </DropdownItem>
   </DropdownMenu>)  
     } else {
-      //console.log(typeFood);
-      
       if (typeFood === "POSTRES") {
 
         return(
-          <DropdownMenu persist={true}>
-
-        { this.state.menu.POSTRES.map( (item,i) => ( 
+          <DropdownMenu>
+        { 
+          //onClick={()=>this.props.addItem([item])}
+          this.state.menu.POSTRES.map( (item,i) => ( 
           <DropdownItem key={`postres-items-${i}`}>  
-            <div onClick={()=>console.log("adlkad")}>
-              <Badge color="dark" onClick={()=>this.addItem} pill>{item}</Badge>  
-            </div>
+              <div onClick={() => console.log('Hola desde div')}>
+              <Badge color="dark" onClick={() => console.log('Hola desde badge')}  pill>{item}</Badge>  
+              </div>
           </DropdownItem>
         ))}
       </DropdownMenu>

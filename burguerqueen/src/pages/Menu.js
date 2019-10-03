@@ -119,15 +119,21 @@ render() {
         <section className={"bg-soft"}>
             <Nav />    
             <Boxfinish clientName={this.state.client.name} footerText="FINALIZAR"/> 
+            <Button onClick={() => console.log('holaaaa')}>hola</Button> 
+
             {
       //       this.state.menu ? 
     Object.keys(this.state.menu).map((element, i) => (
       <ButtonDropdown key={i} data-typefood={element} className={"menu-icon"} isOpen={this.state.dropdownOpen} toggle={this.toggle} onClick={() => this.setTypeFood(element)} >
-      <DropdownToggle caret>
+        <Button id="caret" color="secondary">          <CardImg  data-typefood={element} bottom width="87px" height="87px" src={img[this.state.img[element]]} alt={element} onClick={() => this.setTypeFood(element)} />
+            <p  data-typefood={element} onClick={() => this.setTypeFood(element)} >{element}</p></Button>
+  <DropdownToggle caret color="secondary" />
+      {/* <DropdownToggle caret>
           <CardImg  data-typefood={element} bottom width="87px" height="87px" src={img[this.state.img[element]]} alt={element} onClick={() => this.setTypeFood(element)} />
             <p  data-typefood={element} onClick={() => this.setTypeFood(element)} >{element}</p>
-      </DropdownToggle>
-      {(this.state.typeFood && this.state.typeFood == element) ?
+      </DropdownToggle> */}
+      
+      {(this.state.typeFood && this.state.typeFood === element) ?
       <ItemDropdown key={i}  typefood={this.state.typeFood} menu={this.state.menu} prices={this.state.prices}  addItem={this.addItem}/* isOpen={this.state.dropdownOpen} */ /* toggle={this.toggle} */ /* typefood={this.state.typeFood} *//> :
       ""
       }

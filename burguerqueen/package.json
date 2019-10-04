@@ -30,15 +30,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "lint": "eslint ./",
-    "lint:fix": "eslint ./ --fix",
-    "precommit": "lint-staged"
-  },
-  "lint-staged": {
-    "*.{js,jsx}": [
-      "pretty-quick --staged",
-      "eslint src/ --fix",
-      "git add"
-    ]
+    "lint:fix": "eslint ./ --fix"
   },
   "eslintConfig": {
     "extends": "react-app"

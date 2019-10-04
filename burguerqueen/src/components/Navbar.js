@@ -1,14 +1,18 @@
 import React from 'react';
-import Btn from "./Btn";
+import Btn from './Btn';
 
 class Navbar extends React.Component {
-    render() {
-        return (
-        <nav className={"navbar nav-dark"}>
-            <Btn type="button" class="btn btn-dark double og-hover" text="IR A ADMINISTRACIÓN"/>
-        </nav>)
-    }
-};
+  render() {
+    return (
+      <nav className="navbar nav-dark">
+        <Btn
+          type="button"
+          class="btn btn-dark double og-hover"
+          text="IR A ADMINISTRACIÓN"
+        />
+      </nav>
+    );
+  }
+}
 
 export default Navbar;
-

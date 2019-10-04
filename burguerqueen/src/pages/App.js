@@ -1,24 +1,28 @@
 import React, { Component } from 'react';
-//import { UserProvider } from '../UserContext'
-import { BrowserRouter, Route } from 'react-router-dom';
-import Home from '../pages/Home';
-import Menu from '../pages/Menu';
-import './App.css';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
+import Home from './Home';
+import Menu from './Menu';
+import Login from './Login';
+import GetIn from './GetIn';
+import Kitchen from './Kitchen';
+import Error from './Error404';
+import './App.css';
 
 class App extends Component {
   render() {
-   // const client = { client:'' }
-
     return (
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/Menu" component={Menu} />
+          <Route path="/Login" component={Login} />
+          <Route path="/Get" component={GetIn} />
+          <Route path="/Kitchen" component={Kitchen} />
 
-        <BrowserRouter>
-          <div>
-            
-            <Route path="/Home" component={Home} />
-            <Route path="/Menu" component={Menu} />
-          </div>
-        </BrowserRouter>
+          <Route path="*" component={Error} />
+        </Switch>
+      </BrowserRouter>
     );
   }
 }

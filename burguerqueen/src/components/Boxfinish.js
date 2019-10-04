@@ -2,47 +2,45 @@ import React from 'react';
 import { Table } from 'reactstrap';
 
 import Btn from "./Btn";
-
-import { ClientConsumer } from '../ClientContext'
+import { ClientConsumer } from '../ClientContext';
 
 
 class Boxfinish extends React.Component {
     constructor() {
         super();
         this.state = {
-        client: {
-            name: '',
-            order: ''
-        }
+            client: {
+                name: '',
+                order: ''
+            }
         };
     }
 
-componentDidMount() {
-    this.setState({
-        client: {
-        name: localStorage.getItem('myData').toUpperCase(),
-        order: [
-            {
-                product: "SOBERBIA",
-                price: "55",
-                quantity: "1"
-            },
-            {
-                product: "MALICIA",
-                price: "65",
-                quantity: "1"
+    componentDidMount() {
+        this.setState({
+            client: {
+                name: localStorage.getItem('myData').toUpperCase(),
+                order: [
+                    {
+                        product: "SOBERBIA",
+                        quantity: "1",
+                        price: "50"
+                    }
+                ]
             }
-        ]
-        }
-    })
-}
+        });
+    }
 
 
     render() {
         return (
             <ClientConsumer>
                         {props => {
-        const client = props.client;
+                            props ?
+        console.log(props.name):
+        console.log('No hay props, boxfinish');
+        
+        
 
         // this.setState({
         //     client: client
@@ -50,7 +48,7 @@ componentDidMount() {
 
           return (
           <div className={"card bg-light"} >
-          <div className="btn btn-dark btn-lg btn-block box-header">ORDEN DE: <p>{this.props.clientName}</p>
+          <div className="btn btn-dark btn-lg btn-block box-header">ORDEN DE: <p>{props.name}</p>
               </div>
                   <div className="card-body">
                   <Table striped>
@@ -64,8 +62,8 @@ componentDidMount() {
         </thead>
         <tbody>
          {
-             this.state.client.order ? 
-             this.state.client.order.map((item,i) => (            
+            this.state.client.order? 
+            this.state.client.order.map((item,i) => (            
                 <tr key={i}>
                 <th scope="row">{i + 1}</th>
                 <td>{item.product}</td>

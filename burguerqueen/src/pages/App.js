@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from '../pages/Home';
 import Menu from '../pages/Menu';
 import Login from '../pages/Login';
@@ -12,6 +12,7 @@ import './App.css';
 class App extends Component {
   render() {
     return (
+      <BrowserRouter>
         <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/Menu" component={Menu} />
@@ -21,6 +22,8 @@ class App extends Component {
 
             <Route path="*" component={Error} />
         </Switch>
+      
+      </BrowserRouter>
 
     );
   }

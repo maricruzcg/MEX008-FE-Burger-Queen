@@ -39,12 +39,19 @@ class Menu extends React.Component {
               img: data.IMG,
               prices: data.PRICES
           })
-       //   console.log(data.MENU);
+        //  console.log(this.state.prices.SOBERBIA);
       });
 
       this.setState({
           client: {
-          name: localStorage.getItem('myData').toUpperCase()
+          name: localStorage.getItem('myData').toUpperCase(),
+          order: [
+            {
+              product: "SOBERBIA",
+              quantity: 1,
+              price: "50"
+            }
+          ]
           }
       })
   }
@@ -67,12 +74,12 @@ class Menu extends React.Component {
       };
 
       addItem(item) {
-        console.log('addItem', item);
+      // console.log('addItem', item);
         
         const newProduct = {
           item: item,
           quantity: 1,
-          price: this.state.prices.item
+          price: this.state.prices[item]
         };
         
       const orderStart = this.state.client.order;
@@ -88,10 +95,10 @@ class Menu extends React.Component {
 
 
 render() {
-  const {name, order} = this.state.client;
+  //const {name, order} = this.state.client;
   const client = { 
-    name: {name},
-    order: {order}
+    name: this.state.client.name,
+    order: this.state.client.order
 }
 
 

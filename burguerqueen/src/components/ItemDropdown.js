@@ -25,10 +25,14 @@ componentDidMount(){
 })
 }
 
- console (e) {
-   e.preventDefault();
-   console.log('hola2');
- }
+setSubsection(data) {
+
+  this.setState({
+    subsection: data
+  }); 
+  console.log(this.state.subsection);
+      
+} 
 
   render() {
 
@@ -46,7 +50,7 @@ componentDidMount(){
         { 
           //onClick={()=>this.props.addItem([item])}
           this.state.menu.POSTRES.map( (item,i) => ( 
-          <DropdownItem key={`postres-items-${i}`} toggle={false} onClick={() => console.log(`Hola desde ${item}`)}>  
+          <DropdownItem key={`postres-items-${i}`} toggle={false} onClick={() => this.props.addItem(item)}>  
               
               <Badge color="dark" pill>{item}</Badge>  
               
@@ -57,19 +61,16 @@ componentDidMount(){
           }
       if (typeFood === "COMIDA") {
         return(
-          <div className={"transparent"}>
+          <div>
           <DropdownMenu>
   {    
     Object.keys(this.state.menu.COMIDA).map( (subsection, i )=> 
-          <DropdownItem  key={i} data-subsection={subsection}>  <Badge color="dark" data-subsection={subsection} pill>{subsection}</Badge>  </DropdownItem>
+          <DropdownItem  key={i} toggle={false} data-subsection={subsection} onClick={() => {this.setSubsection(subsection)}}>  
+          <Badge color="dark" pill>{subsection}</Badge>  
+          </DropdownItem>
       ) 
       }
-      {    
-        Object.keys(this.state.menu.COMIDA).map( (subsection,i) => 
-          
-              <ItemDrop key={i}  menu={this.state.menu.COMIDA[subsection]} prices={this.state.prices} subsection={subsection} /* isOpen={this.state.dropdownOpen} */ /* toggle={this.toggle} */ /* typefood={this.state.typeFood}*/ />
-          ) 
-          }
+      <ItemDrop subsection={this.state.subsection} menu={this.state.menu.COMIDA[this.state.subsection]} prices={this.state.prices} addItem={this.props.addItem}/> 
           </DropdownMenu> 
           </div>
              )
@@ -80,17 +81,13 @@ componentDidMount(){
               <div>
               <DropdownMenu>
       {    
-        Object.keys(this.state.menu.BEBIDAS).map( (subsection,i) => 
-              <DropdownItem key={i} data-subsection={subsection}>  <Badge color="dark" data-subsection={subsection} pill>{subsection}</Badge>  </DropdownItem>
+        Object.keys(this.state.menu.BEBIDAS).map( (subsection, i )=> 
+              <DropdownItem  key={i} toggle={false} data-subsection={subsection} onClick={() => {this.setSubsection(subsection)}}>  
+              <Badge color="dark" pill>{subsection}</Badge>  
+              </DropdownItem>
           ) 
           }
-          {    
-            Object.keys(this.state.menu.BEBIDAS).map( (subsection,i) => 
-              
-                  <ItemDrop key={i} menu={this.state.menu.BEBIDAS[subsection]} prices={this.state.prices} subsection={subsection} /* isOpen={this.state.dropdownOpen} */ /* toggle={this.toggle} */ /* typefood={this.state.typeFood}*/ />
-                  // <DropdownItem data-subsection={subsection}>  <Badge color="dark" data-subsection={subsection} pill>{subsection}</Badge>  </DropdownItem>
-              ) 
-              }
+          <ItemDrop subsection={this.state.subsection} menu={this.state.menu.BEBIDAS[this.state.subsection]} prices={this.state.prices} addItem={this.props.addItem}/> 
               </DropdownMenu> 
               </div>
                  )

@@ -5,7 +5,7 @@ import mesereando from '../imgFED/mesereando.png';
 const GetIn = () => {
   return (
     <div className="form-in">
-      <img className="img-log" src={mesereando} />
+      <img className={'img-log'} src={mesereando} alt="logo" />
       <h1>EQUIPO</h1>
       <FormGroup>
         <Label for="exampleEmail">Nombre</Label>

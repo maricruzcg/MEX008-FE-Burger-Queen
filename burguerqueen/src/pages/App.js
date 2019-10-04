@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
+
 import Home from '../pages/Home';
 import Menu from '../pages/Menu';
 import GetIn from '../pages/GetIn';
@@ -15,13 +16,8 @@ class App extends Component {
             <Route exact path="/" component={GetIn} />
             <Route path="/Menu" component={Home} />
             <Route path="/Menu" component={Menu} />
-
-
-            <Route path="/Login" component={Login}/>
             <Route path="/Get" component={GetIn}/>
-
             <Route path="/Kitchen" component={Kitchen} />
-
             <Route path="*" component={Error} />
         </Switch>
 

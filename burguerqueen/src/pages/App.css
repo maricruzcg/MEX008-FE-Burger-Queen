@@ -4,8 +4,13 @@ body{
 
 .img-log{
     margin:10px auto;
-    display:block; 
-    width: 25%
+    display: -webkit-inline-box;
+    margin-left: 12%;
+    width: 25%;
+}
+h2{
+    display: flow-root;
+    text-align: center;
 }
 .btn-login{
     position:absolute; 
@@ -13,10 +18,20 @@ body{
     text-align:center;  
 }
 .form-in{
-    text-align: center;
-    margin: 1rem;
-    padding: 2rem;
-    border: 100px
+    background-image: url(../imgFED/imagebackground.png);
+    display: flex;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.box-welcome{
+    background: rgba(241, 239, 239, 0.8);
+    width: 64%;
+    height: 100%;
+}
+.box-password{
+    background: rgba(230, 230, 230, 0.3);
+    width: 36%;
+    height:100%;
 
 }
 section{
@@ -27,7 +42,7 @@ section{
     background-image: url(../imgFED/imagebackground.png);  
     background-position: center;
     background-repeat: no-repeat;
-    /* background-size: cover;  */
+    background-size: cover; 
 }
 
 .slate{

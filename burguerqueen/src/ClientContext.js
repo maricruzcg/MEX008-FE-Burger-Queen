@@ -1,12 +1,12 @@
-import React from 'react'
+import React from 'react';
 
 const ClientContext = React.createContext({
-    client:{
-        name:'',
-        order:''
-    },
-})
+  client: {
+    name: '',
+    order: ''
+  }
+});
 
-export const ClientProvider = ClientContext.Provider
-export const ClientConsumer = ClientContext.Consumer
-export default ClientContext
+export const ClientProvider = ClientContext.Provider;
+export const ClientConsumer = ClientContext.Consumer;
+export default ClientContext;

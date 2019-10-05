@@ -2,7 +2,7 @@ body {
     font-family: 'Roboto', sans-serif !important;
 }
 
-.form-in {
+/* .form-in {
     background-image: url(../imgFED/imagebackground.png);
     display: flex;
     background-repeat: no-repeat;
@@ -55,14 +55,9 @@ p {
     width: 36%;
     height: 100%;
 
-}
-
-/* .h1 {
-    font-size: 2rem;
-    font-weight: 600;
 } */
 
-.box-center {
+/* .box-center {
     left: 15%;
     text-align: center;
     margin-top: 30%;
@@ -107,7 +102,7 @@ p {
 
 section {
     height: 100vh;
-}
+} */
 
 .burguer {
     background-image: url(../imgFED/imagebackground.png);

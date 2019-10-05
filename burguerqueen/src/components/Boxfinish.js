@@ -46,14 +46,14 @@ class Boxfinish extends React.Component {
     });
   }
 
-  onChange(product, quantity, price) {
+  onChange(product, e, price) {
     const order = JSON.parse(localStorage.getItem('order'));
     const index = order.findIndex(item => item.product === product);
     order.splice(index, 1);
 
     const updateProduct = {
       product: product,
-      quantity: quantity + 1,
+      quantity: e,
       price: price
     };
     order.push(updateProduct);
@@ -97,14 +97,20 @@ class Boxfinish extends React.Component {
                         min={0}
                         max={50}
                         value={item.quantity}
-                        onChange={() =>
-                          this.onChange(item.product, item.quantity, item.price)
+                        onChange={e =>
+                          this.onChange(item.product, e, item.price)
                         }
                       />
                     </td>
                     <td>${item.price}</td>
                     <td className={'td-icon'}>
                       <CardImg width="7px" src={Delete} alt="delete" onClick={() => this.deleteProduct(item.product)}/>
+                      <CardImg
+                        width="7px"
+                        src={Delete}
+                        alt="delete"
+                        onClick={() => this.deleteProduct(item.product)}
+                      />
                     </td>
                     <td className={'td-icon'}>
                       <CardImg width="7px" src={Edit} alt="edit"/>
@@ -120,7 +126,6 @@ class Boxfinish extends React.Component {
             </tbody>
           </Table>
         </div>
-
 
         <Table className={'total'}>
           <tr>

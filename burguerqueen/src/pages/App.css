@@ -4,6 +4,11 @@ body {
 
 .form-in {
     background-image: url(../imgFED/imagebackground.png);
+
+
+/* .form-in {
+    background-image: url(../imgFED/imagebackground.png);
+.form-in {
     display: flex;
     background-repeat: no-repeat;
     background-size: cover;
@@ -62,6 +67,41 @@ p {
     font-weight: 600;
 } */
 
+}
+
+.text-welcome h2 {
+    margin-bottom: 1rem;
+    font-size: 2.8rem;
+    font-weight: 600;
+    line-height: 3rem;
+}
+
+p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 3rem;
+}
+
+.btn-login {
+    width: 51vw;
+    height: 9vh;
+    left: 43%;
+    display: block !important;
+    margin-left: 9%;
+    margin-top: 5%;
+}
+
+.box-password {
+    background: rgba(230, 230, 230, 0.5);
+    width: 36%;
+    height: 100%;
+
+} */
+
+/* .box-center {
+}
+
 .box-center {
     left: 15%;
     text-align: center;
@@ -108,6 +148,46 @@ p {
 section {
     height: 100vh;
 }
+
+.input-password {
+    background: #FFFFFF;
+    border: 1px solid #1C1C1C;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    width: 226px;
+    height: 66px;
+    margin-top: 10%;
+}
+
+.box-buttons {
+    margin-top: 8%;
+}
+
+.btn-number {
+    width: 73px;
+    height: 50px;
+    margin: 1px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    font-size: xx-large;
+}
+
+.btn-valid-password {
+    background: #23AE53;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.14),
+        0px 4px 5px rgba(0, 0, 0, 0.12),
+        0px 1px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    margin-top: 7%;
+}
+
+section {
+    height: 100vh;
+} */
 
 .burguer {
     background-image: url(../imgFED/imagebackground.png);
@@ -186,11 +266,6 @@ section {
     border-color: #60DE5D !important;
 }
 
-/* .btn-drinks {
-    max-height: 1rem;
-    font-weight: 900;
-} */
-
 .dropdown-menu.show {
     display: inherit !important;
 }
@@ -222,7 +297,7 @@ section {
 } */
 
 .double {
-    width: 90%;
+    width: 19%;
 }
 
 .card {
@@ -322,10 +397,10 @@ section {
 }
 
 .quantity {
-    width: 6rem !important;
+    width: 7.4rem !important;
 }
 .td-quantity {
-    padding-left: 0rem !important; 
+    padding-left: .2rem !important; 
 }
 .td-icon {
     padding: 0.48rem !important; 

@@ -27,6 +27,7 @@ class BoxGet extends React.Component{
              <h3><strong>Ingresa tu contraseña</strong></h3>
               
               <input type="text" className="input-password"></input>
+              
                   <div className="box-buttons">
                     <div>
                       <input className="btn-number" type="button" value="7"></input>

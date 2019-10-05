@@ -113,6 +113,7 @@ class Boxfinish extends React.Component {
           </Table>
         </div>
 
+
         <Table className={'total'}>
           <tr>
             <th></th>
@@ -122,6 +123,7 @@ class Boxfinish extends React.Component {
             <th>SUBTOTAL</th>
             <th>${this.state.client.total}</th>
           </tr>
+
 
         </Table>
 

@@ -1,0 +1,32 @@
+{
+    	// añade la opción "parser" con "babel-eslint"
+	"parser": "babel-eslint",
+
+	// añade "prettier" (y si quieres "prettier/react") a las opciones de "extends"
+	"extends": ["airbnb", "prettier", "prettier/react"],
+
+	// y por ultimo, en la llave de "plugins" añade el plugin de eslint para prettier
+	"plugins": ["prettier"],
+
+    "rules": {
+      "react/jsx-filename-extension": [
+        1,
+        {
+          "extensions": [".js", ".jsx"]
+        }
+      ],
+      "react/prop-types": 0,
+      "no-underscore-dangle": 0,
+      "import/imports-first": ["error", "absolute-first"],
+      "import/newline-after-import": "error"
+    },
+    "globals": {
+      "window": true,
+      "document": true,
+      "localStorage": true,
+      "FormData": true,
+      "FileReader": true,
+      "Blob": true,
+      "navigator": true
+    }
+  }

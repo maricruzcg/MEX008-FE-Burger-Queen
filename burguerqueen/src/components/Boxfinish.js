@@ -2,7 +2,6 @@ import React from 'react';
 import { Table } from 'reactstrap';
 import NumericInput from 'react-numeric-input';
 
-
 import Btn from './Btn';
 
 class Boxfinish extends React.Component {
@@ -24,21 +23,23 @@ class Boxfinish extends React.Component {
     // const sum = (a, b) => {
     //   console.log(a['price']);
     //   console.log(b['price']);
-    //   return a['price']+b['price'] 
+    //   return a['price']+b['price']
     // }
 
-    // const total = Array.isArray(order) 
+    // const total = Array.isArray(order)
     //   ? order.reduce((a, b) => {return a['price'] + b['price']},0)
     //   : 0;
 
-    const orderPrices = order.map(item => item.price);
-    const total = orderPrices.reduce((a, b) => a + b, 0);    
+    const orderPrices = order.map(item => {
+      return item.quantity * item.price;
+    });
+    const total = orderPrices.reduce((a, b) => a + b, 0);
 
     const clientName = localStorage.getItem('clientName')
       ? localStorage.getItem('clientName').toUpperCase()
       : '';
 
-   // const order = JSON.parse(localStorage.getItem('order'));
+    // const order = JSON.parse(localStorage.getItem('order'));
 
     this.setState({
       client: {
@@ -71,7 +72,14 @@ class Boxfinish extends React.Component {
                   <tr key={i}>
                     <th scope="row">{i + 1}</th>
                     <td>{item.product}</td>
-                    <td><NumericInput className={"form-control"} min={0} max={50} value={item.quantity}/></td>
+                    <td>
+                      <NumericInput
+                        className={'form-control'}
+                        min={0}
+                        max={50}
+                        value={item.quantity}
+                      />
+                    </td>
                     <td>{item.price}</td>
                   </tr>
                 ))
@@ -83,15 +91,17 @@ class Boxfinish extends React.Component {
                   <td />
                 </tr>
               )}
-              <tr>
-                <th>#</th>
-                <th>Items</th>
-                <th>Total</th>
-                <th>{this.state.client.total}</th>
-              </tr>
             </tbody>
           </Table>
         </div>
+        <Table className={"total"}>
+            <tr>
+              <th></th>
+              <th></th>
+              <th>Total</th>
+              <th>{this.state.client.total}</th>
+            </tr>
+        </Table>
 
         <div className="card-footer text-muted d-flex justify-content-center footer-dark">
           <Btn text={this.props.footerText} class="btn finish-dark og-hover" />

@@ -61,6 +61,14 @@ class Boxfinish extends React.Component {
     localStorage.setItem('order', JSON.stringify(order));
   }
 
+deleteProduct(product) {
+    const order = JSON.parse(localStorage.getItem('order'));
+    const index = order.findIndex(item => item.product === product);
+    order.splice(index, 1);
+
+    localStorage.setItem('order', JSON.stringify(order));
+  }
+
   render() {
     return (
       <div className="card bg-light">
@@ -96,7 +104,7 @@ class Boxfinish extends React.Component {
                     </td>
                     <td>${item.price}</td>
                     <td className={'td-icon'}>
-                      <CardImg width="7px" src={Delete} alt="delete" />
+                      <CardImg width="7px" src={Delete} alt="delete" onClick={() => this.deleteProduct(item.product)}/>
                     </td>
                     <td className={'td-icon'}>
                       <CardImg width="7px" src={Edit} alt="edit" />

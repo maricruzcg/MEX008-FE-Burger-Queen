@@ -168,6 +168,7 @@ background-color: #f8f9fa !important;
 
 .card-body {
     background-color: #f8f9fa;
+    overflow-y: scroll;
 }
 
 .box-header{
@@ -247,4 +248,16 @@ background-color: #f8f9fa !important;
 
 .order-kitchen{
     flex-direction: column;
+}
+
+.form-control {
+    width: 6rem !important;
+}
+
+.card {
+    width: 25.5rem;
+}
+
+.total {
+    background-color: rgba(0, 0, 0, 0.212); 
 }

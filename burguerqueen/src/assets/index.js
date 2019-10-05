@@ -3,7 +3,7 @@ import Drink from './drink.png';
 import Dessert from './icecream.png';
 
 export default {
-    Food,
-    Drink,
-    Dessert
+  Food,
+  Drink,
+  Dessert
 };

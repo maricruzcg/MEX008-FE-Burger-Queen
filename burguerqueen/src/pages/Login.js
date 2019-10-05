@@ -6,7 +6,7 @@ const Login = () => {
   return (
     <seccion className="login">
       <div>
-        <img className="img-log" src={mesereando} />
+        <img className={"img-log"} src={mesereando} alt="logo" />
         <Button className="btn-login" color="secondary">
           INICIA SESIÓN
         </Button>

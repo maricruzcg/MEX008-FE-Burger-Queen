@@ -18,9 +18,9 @@ class Menu extends React.Component {
       menu: '',
       img: '',
       prices: '',
+      user: '',
       client: {
-        name: '',
-        order: []
+        name: ''
       },
 
       dropdownOpen: {}
@@ -37,10 +37,15 @@ class Menu extends React.Component {
           prices: data.PRICES
         });
       });
+    
+    const clientName = localStorage.getItem('clientName') ?
+      localStorage.getItem('clientName').toUpperCase() :
+      '';
 
     this.setState({
       client: {
-        name: localStorage.getItem('myData').toUpperCase()
+        name: clientName,
+        order: localStorage.getItem('order')
       }
     });
   }
@@ -55,15 +60,22 @@ class Menu extends React.Component {
   }
 
   addItem(item, price) {
-    //    console.log('addItem', item, price);
+    const newOrder = JSON.parse(localStorage.getItem('order'));
 
     const newProduct = {
       product: item,
       quantity: 1,
-      price
+      price: price
     };
 
-    console.log(newProduct);
+    newOrder.push(newProduct);
+
+    console.log(newOrder);
+    console.log(newOrder[1].price);
+    
+    localStorage.setItem('order',  JSON.stringify(newOrder));
+
+    // console.log(newOrder);
 
     // const orderStart = this.state.client.order;
     // orderStart.push(newProduct);
@@ -78,16 +90,15 @@ class Menu extends React.Component {
 
   render() {
     // const {name, order} = this.state.client;
-    const client = {
-      name: this.state.client.name,
-      order: this.state.client.order
+    const env = {
+      user: this.state.user,
     };
 
     if (!this.state.menu) {
       return <p>Cargando Menú...</p>;
     }
     return (
-      <ClientProvider value={client}>
+      <ClientProvider value={env}>
         <section className="bg-soft">
           <Nav />
           <Boxfinish

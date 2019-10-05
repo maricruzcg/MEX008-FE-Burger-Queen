@@ -259,5 +259,6 @@ background-color: #f8f9fa !important;
 }
 
 .total {
-    background-color: rgba(0, 0, 0, 0.212); 
+    background-color: rgba(0, 0, 0, 0.137); 
+    margin-bottom: 0rem !important;
 }

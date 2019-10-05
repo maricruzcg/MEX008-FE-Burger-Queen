@@ -4,10 +4,10 @@ import BoxGet from "../components/BoxGet";
 
 const GetIn = () => {
     return (
-        <section>
-            <div>
-            <BoxGet/>
-            </div>    
+      <section className={"burguer"}>
+      <div className={"overlay"}>
+          <BoxGet />
+      </div>          
         </section>
     );
 }

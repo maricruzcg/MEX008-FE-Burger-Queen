@@ -1,14 +1,25 @@
 import React from 'react';
-import Btn from "./Btn";
+import { withRouter } from 'react-router-dom';
+import { Button } from 'reactstrap';
 
 class Navbar extends React.Component {
-    render() {
-        return (
-        <nav className={"navbar nav-dark"}>
-            <Btn type="button" class="btn btn-dark double og-hover" text="IR A ADMINISTRACIÓN"/>
-        </nav>)
-    }
-};
+  handleClick(ev) {
+    this.props.history.push('/');
+  }
 
-export default Navbar;
+  render() {
+    return (
+      <nav className="navbar nav-dark">
+        <Button
+          type="submit"
+          className="btn btn-dark double og-hover"
+          onClick={this.handleClick.bind(this)}
+        >
+          IR A ADMINISTRACIÓN
+        </Button>
+      </nav>
+    );
+  }
+}
 
+export default withRouter(Navbar);

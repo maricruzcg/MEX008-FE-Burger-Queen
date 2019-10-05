@@ -3,7 +3,6 @@ body {
 }
 
 .form-in {
-    background-image: url(../imgFED/imagebackground.png);
     display: flex;
     background-repeat: no-repeat;
     background-size: cover;
@@ -34,11 +33,18 @@ body {
     height: 100%;
 }
 
+.text-welcome h2 {
+    margin-bottom: 1rem;
+    font-size: 2.8rem;
+    font-weight: 600;
+    line-height: 3rem;
+}
+
 p {
     margin-bottom: 1rem;
-    font-size: 2.5rem;
+    font-size: 1.1rem;
     font-weight: 600;
-    line-height: 1.6rem;
+    line-height: 3rem;
 }
 
 .btn-login {
@@ -56,11 +62,6 @@ p {
     height: 100%;
 
 }
-
-/* .h1 {
-    font-size: 2rem;
-    font-weight: 600;
-} */
 
 .box-center {
     left: 15%;
@@ -103,7 +104,6 @@ p {
     height: 90px;
     margin-top: 7%;
 }
-
 
 section {
     height: 100vh;
@@ -186,11 +186,6 @@ section {
     border-color: #60DE5D !important;
 }
 
-/* .btn-drinks {
-    max-height: 1rem;
-    font-weight: 900;
-} */
-
 .dropdown-menu.show {
     display: inherit !important;
 }
@@ -216,13 +211,8 @@ section {
     border-radius: 1.25rem;
 }
 
-/* .dropdown-item:hover {*/
-/*     box-shadow: 0px 9px 18px rgba(0, 0, 0, 0.18), 0px 6px 5px rgba(0, 0, 0, 0.24);*/
-/*    border-radius: 1.25rem;
-} */
-
 .double {
-    width: 90%;
+    width: 19%;
 }
 
 .card {

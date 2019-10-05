@@ -14,8 +14,8 @@ class App extends Component {
     return (
       <BrowserRouter>
         <Switch>
-          <Route exact={process.env.PUBLIC_URL + '/Getin'} component={GetIn} />
-          <Route exact path={process.env.PUBLIC_URL + '/'} component={Home} />
+          <Route exact path={process.env.PUBLIC_URL + '/'} component={GetIn} />
+          <Route path={process.env.PUBLIC_URL + '/Home'} component={Home} />
           <Route path={process.env.PUBLIC_URL + '/Menu'} component={Menu} />
           <Route path={process.env.PUBLIC_URL + '/Kitchen'} component={Kitchen} />
           <Route path={process.env.PUBLIC_URL + '/Login'} component={Login} />

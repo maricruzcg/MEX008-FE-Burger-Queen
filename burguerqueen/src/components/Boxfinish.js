@@ -98,6 +98,8 @@ class Boxfinish extends React.Component {
             <tr>
               <th></th>
               <th></th>
+              <th></th>
+              <th></th>
               <th>Total</th>
               <th>{this.state.client.total}</th>
             </tr>

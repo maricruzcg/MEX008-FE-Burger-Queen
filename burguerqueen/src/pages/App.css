@@ -2,16 +2,70 @@ body {
     font-family: 'Roboto', sans-serif !important;
 }
 
+.form-in {
+    background-image: url(../imgFED/imagebackground.png);
+    display: flex;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .img-log {
     margin: 10px auto;
     display: -webkit-inline-box;
     margin-left: 12%;
     width: 25%;
+    margin-top: 10%;
 }
 
-h2 {
-    display: flow-root;
+.text-welcome {
+    display: inline-block;
+    vertical-align: text-top;
+    margin-left: 10%;
+    margin-top: 23px;
+}
+
+.box-btn-welcome {
+    margin-top: 23%;
+}
+
+.box-welcome {
+    background: rgba(241, 239, 239, 0.8);
+    width: 64%;
+    height: 100%;
+}
+
+p {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.6rem;
+}
+
+.btn-login {
+    width: 51vw;
+    height: 9vh;
+    left: 43%;
+    display: block !important;
+    margin-left: 9%;
+    margin-top: 5%;
+}
+
+.box-password {
+    background: rgba(230, 230, 230, 0.5);
+    width: 36%;
+    height: 100%;
+
+}
+
+/* .h1 {
+    font-size: 2rem;
+    font-weight: 600;
+} */
+
+.box-center {
+    left: 15%;
     text-align: center;
+    margin-top: 30%;
 }
 
 .input-password {
@@ -29,15 +83,6 @@ h2 {
     margin-top: 8%;
 }
 
-.btn-login {
-    width: 83%;
-    height: 7%;
-    left: 43%;
-    display: block !important;
-    margin-left: 9%;
-    margin-top: 5%;
-}
-
 .btn-number {
     width: 73px;
     height: 50px;
@@ -45,33 +90,20 @@ h2 {
     background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
+    font-size: xx-large;
 }
 
-.box-center {
-    left: 15%;
-    text-align: center;
-    margin-top: 15%;
+.btn-valid-password {
+    background: #23AE53;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.14),
+        0px 4px 5px rgba(0, 0, 0, 0.12),
+        0px 1px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    margin-top: 7%;
 }
 
-.form-in {
-    background-image: url(../imgFED/imagebackground.png);
-    display: flex;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.box-welcome {
-    background: rgba(241, 239, 239, 0.8);
-    width: 64%;
-    height: 100%;
-}
-
-.box-password {
-    background: rgba(230, 230, 230, 0.3);
-    width: 36%;
-    height: 100%;
-
-}
 
 section {
     height: 100vh;

@@ -9,18 +9,24 @@ class BoxGet extends React.Component{
         <section className="form-in">
             <section className="box-welcome">
             <img className="img-log" src={logo}/>
-            <h2>¡TE DAMOS LA </h2>
-            <h2>BIENVENIDA!</h2>
+
+            <div className="text-welcome">
+            <p>¡TE DAMOS LA </p>
+            <p>BIENVENIDA!</p>
+            </div>
             
-            <Button className="btn-login" color="secondary">EQUIPO</Button>  
-            <Button className="btn-login btn-admin" color="secondary">ADMINISTRACIÓN</Button>  
+            <div className="box-btn-welcome">
+              <Button className="btn-login" color="secondary"><h4>EQUIPO</h4></Button>  
+              <Button className="btn-login" color="secondary"><h4>ADMINISTRACIÓN</h4></Button>  
+            </div>
             </section>
+
             <section className="box-password">
               <section className="box-center">
-              <h3>Ingresa tu contraseña</h3>
+
+             <h3><strong>Ingresa tu contraseña</strong></h3>
+              
               <input type="text" className="input-password"></input>
-
-
                   <div className="box-buttons">
                     <div>
                       <input className="btn-number" type="button" value="7"></input>
@@ -47,8 +53,8 @@ class BoxGet extends React.Component{
                     </div>
 
                     </div>
-    
-                  <button className="">flecha</button>
+
+                  <button className="btn-valid-password">flecha</button>
               </section>              
             </section>
       

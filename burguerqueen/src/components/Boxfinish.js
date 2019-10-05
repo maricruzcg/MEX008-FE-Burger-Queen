@@ -18,22 +18,16 @@ class Boxfinish extends React.Component {
 
   componentDidMount() {
     const order = JSON.parse(localStorage.getItem('order'));
-    console.log(typeof order[2].price);
+    let total;
+    if (order) {
+      const orderPrices = order.map(item => {
+        return item.quantity * item.price;
+      });
+      total = orderPrices.reduce((a, b) => a + b, 0);      
+    } else {
+      total = 0;
+    }
 
-    // const sum = (a, b) => {
-    //   console.log(a['price']);
-    //   console.log(b['price']);
-    //   return a['price']+b['price']
-    // }
-
-    // const total = Array.isArray(order)
-    //   ? order.reduce((a, b) => {return a['price'] + b['price']},0)
-    //   : 0;
-
-    const orderPrices = order.map(item => {
-      return item.quantity * item.price;
-    });
-    const total = orderPrices.reduce((a, b) => a + b, 0);
 
     const clientName = localStorage.getItem('clientName')
       ? localStorage.getItem('clientName').toUpperCase()
@@ -74,7 +68,7 @@ class Boxfinish extends React.Component {
                     <td>{item.product}</td>
                     <td>
                       <NumericInput
-                        className={'form-control'}
+                        className={"form-control quantity"}
                         min={0}
                         max={50}
                         value={item.quantity}

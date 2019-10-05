@@ -71,7 +71,6 @@ class Menu extends React.Component {
     newOrder.push(newProduct);
 
     console.log(newOrder);
-    console.log(newOrder[1].price);
     
     localStorage.setItem('order',  JSON.stringify(newOrder));
 

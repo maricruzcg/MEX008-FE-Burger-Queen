@@ -46,14 +46,14 @@ class Boxfinish extends React.Component {
     });
   }
 
-  onChange(product, quantity, price) {
+  onChange(product, e, price) {
     const order = JSON.parse(localStorage.getItem('order'));
     const index = order.findIndex(item => item.product === product);
     order.splice(index, 1);
 
     const updateProduct = {
       product: product,
-      quantity: quantity + 1,
+      quantity: e,
       price: price
     };
     order.push(updateProduct);
@@ -61,7 +61,7 @@ class Boxfinish extends React.Component {
     localStorage.setItem('order', JSON.stringify(order));
   }
 
-deleteProduct(product) {
+  deleteProduct(product) {
     const order = JSON.parse(localStorage.getItem('order'));
     const index = order.findIndex(item => item.product === product);
     order.splice(index, 1);
@@ -97,14 +97,19 @@ deleteProduct(product) {
                         min={0}
                         max={50}
                         value={item.quantity}
-                        onChange={() =>
-                          this.onChange(item.product, item.quantity, item.price)
+                        onChange={e =>
+                          this.onChange(item.product, e, item.price)
                         }
                       />
                     </td>
                     <td>${item.price}</td>
                     <td className={'td-icon'}>
-                      <CardImg width="7px" src={Delete} alt="delete" onClick={() => this.deleteProduct(item.product)}/>
+                      <CardImg
+                        width="7px"
+                        src={Delete}
+                        alt="delete"
+                        onClick={() => this.deleteProduct(item.product)}
+                      />
                     </td>
                     <td className={'td-icon'}>
                       <CardImg width="7px" src={Edit} alt="edit" />
@@ -130,7 +135,6 @@ deleteProduct(product) {
             <th>SUBTOTAL</th>
             <th>${this.state.client.total}</th>
           </tr>
-
         </Table>
 
         <div className="card-footer text-muted d-flex justify-content-center footer-dark">

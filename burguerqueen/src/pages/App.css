@@ -312,10 +312,10 @@ section {
 }
 
 .quantity {
-    width: 6rem !important;
+    width: 7.4rem !important;
 }
 .td-quantity {
-    padding-left: 0rem !important; 
+    padding-left: .2rem !important; 
 }
 .td-icon {
     padding: 0.48rem !important; 

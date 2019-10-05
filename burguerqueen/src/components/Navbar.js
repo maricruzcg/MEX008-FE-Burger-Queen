@@ -2,8 +2,6 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { Button } from 'reactstrap';
 
-import Btn from './Btn';
-
 class Navbar extends React.Component {
   handleClick(ev) {
     this.props.history.push('/');

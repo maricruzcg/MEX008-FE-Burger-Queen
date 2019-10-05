@@ -238,12 +238,32 @@ background-color: #f8f9fa !important;
 .quantity {
     width: 6rem !important;
 }
+.td-quantity {
+    padding-left: 0rem !important; 
+}
+.td-icon {
+    padding: 0.48rem !important; 
+}
+
+.confirmation{
+    padding: 0 !important;
+    margin: 0 !important;
+}
 
 .card {
     width: 25.5rem;
 }
 
+.card-body{
+    padding: .08rem !important;
+}
+
+.product{
+    padding-right: 0rem !important; 
+    padding-left: .4rem !important; 
+}
 .total {
     background-color: rgba(0, 0, 0, 0.137); 
     margin-bottom: 0 !important;
+    font-size: 1.2rem;
 }

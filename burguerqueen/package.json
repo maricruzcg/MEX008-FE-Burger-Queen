@@ -4,7 +4,7 @@
   "description": "App for restaurant",
   "main": "server.js",
   "private": true,
-  "homepage": ".",
+  "homepage": "https://vianeylararangel.github.io/MEX008-FE-Burger-Queen/",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "bootstrap": "^4.3.1",

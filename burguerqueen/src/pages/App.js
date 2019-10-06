@@ -15,7 +15,7 @@ class App extends Component {
       <Router>
         <Switch>
           <Route exact path={process.env.PUBLIC_URL + '/'} component={GetIn} />
-          <Route exact path={process.env.PUBLIC_URL + 'MEX008-FE-Burger-Queen/Home'} component={Home} />
+          <Route exact path={process.env.PUBLIC_URL + '/Home'} component={Home} />
           <Route exact path={process.env.PUBLIC_URL + '/Menu'} component={Menu} />
           <Route exact path={process.env.PUBLIC_URL + '/Kitchen'} component={Kitchen} />
           <Route exact path={process.env.PUBLIC_URL + '/Login'} component={Login} />

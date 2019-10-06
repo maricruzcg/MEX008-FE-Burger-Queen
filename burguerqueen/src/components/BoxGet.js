@@ -11,8 +11,6 @@
     }
     
     render() {
-      // className="box-password"
-      // className="box-center"
         return (
             <section className={'form-in'} >
             <section className={'box-welcome'} >
@@ -22,7 +20,7 @@
                 <h2>¡TE DAMOS LA </h2>
                 <h2>BIENVENIDA!</h2>
               </div>
-    
+      
               <div className={'box-btn-welcome'}>
                 <Button className={'btn-login'} color="secondary">
                     <h4>EQUIPO</h4>

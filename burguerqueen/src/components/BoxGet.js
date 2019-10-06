@@ -1,5 +1,5 @@
   import React from 'react';
-  import { withRouter } from 'react-router-dom';
+  import { withRouter, Link } from 'react-router-dom';
   import { Button } from 'reactstrap';
   
   import logo from '../imgFED/logo.png';
@@ -7,7 +7,7 @@
   class BoxGet extends React.Component {
     handleClick(ev) {
       ev.preventDefault();
-      this.props.history.push('/Home');
+      this.props.browserHistory.push('/Home');
     }
     
     render() {
@@ -59,8 +59,11 @@
                   <input className={'btn-number'} type="button" value="C"></input>
                 </div>
               </div>
-
-              <button className={'btn-valid-password'} onClick={this.handleClick.bind(this)} >Flecha</button>
+              
+              <button className={'btn-valid-password'} onClick={this.handleClick.bind(this)} >
+                <Link to="/MEX008-FE-Burger-Queen/Home">Flecha</Link>
+              </button>
+              
             </section>
           </section>
         </section>

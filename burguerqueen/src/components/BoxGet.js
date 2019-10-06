@@ -11,10 +11,11 @@
     }
     
     render() {
-
+      // className="box-password"
+      // className="box-center"
         return (
-            <section className={'form-in'}>
-            <section className={'box-welcome'}>
+            <section className={'form-in'} >
+            <section className={'box-welcome'} >
               <img className={'img-log'} src={logo} alt="logo" />
       
               <div className={'text-welcome'}>

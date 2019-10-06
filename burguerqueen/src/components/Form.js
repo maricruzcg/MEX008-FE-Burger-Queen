@@ -28,7 +28,10 @@ class FormUI extends React.Component {
       }
     });
     const clientName = e.target.value;
-    localStorage.setItem('myData', clientName);
+    localStorage.setItem('clientName', clientName);
+
+    const order = [];
+    localStorage.setItem('order', JSON.stringify(order));
   };
 
   render() {

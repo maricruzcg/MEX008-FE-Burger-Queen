@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { ButtonDropdown, DropdownToggle, CardImg } from 'reactstrap';
+import { ButtonDropdown, DropdownToggle, CardImg, Spinner } from 'reactstrap';
 import Nav from '../components/Navbar';
 import Boxfinish from '../components/Boxfinish';
 import ItemDropdown from '../components/ItemDropdown';
@@ -18,9 +18,9 @@ class Menu extends React.Component {
       menu: '',
       img: '',
       prices: '',
+      user: '',
       client: {
-        name: '',
-        order: []
+        name: ''
       },
 
       dropdownOpen: {}
@@ -37,10 +37,15 @@ class Menu extends React.Component {
           prices: data.PRICES
         });
       });
+    
+    const clientName = localStorage.getItem('clientName') ?
+      localStorage.getItem('clientName').toUpperCase() :
+      '';
 
     this.setState({
       client: {
-        name: localStorage.getItem('myData').toUpperCase()
+        name: clientName,
+        order: JSON.parse(localStorage.getItem('order'))
       }
     });
   }
@@ -55,39 +60,31 @@ class Menu extends React.Component {
   }
 
   addItem(item, price) {
-    //    console.log('addItem', item, price);
+    const newOrder = JSON.parse(localStorage.getItem('order'));
 
     const newProduct = {
       product: item,
       quantity: 1,
-      price
+      price: price
     };
 
-    console.log(newProduct);
-
-    // const orderStart = this.state.client.order;
-    // orderStart.push(newProduct);
-
-    // this.setState({
-    //   client: {
-    //     name: localStorage.getItem('myData').toUpperCase(),
-    //     order: orderStart
-    //   }
-    // });
+    newOrder.push(newProduct);
+    //console.log(newOrder); 
+    localStorage.setItem('order',  JSON.stringify(newOrder));
   }
 
   render() {
-    // const {name, order} = this.state.client;
-    const client = {
-      name: this.state.client.name,
-      order: this.state.client.order
+    const env = {
+      user: this.state.user,
     };
 
     if (!this.state.menu) {
-      return <p>Cargando Menú...</p>;
+      return (
+        <Spinner color="info" style={{ width: '3rem', height: '3rem' }} />
+      );
     }
     return (
-      <ClientProvider value={client}>
+      <ClientProvider value={env}>
         <section className="bg-soft">
           <Nav />
           <Boxfinish

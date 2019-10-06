@@ -7,7 +7,7 @@
   class BoxGet extends React.Component {
     handleClick(ev) {
       ev.preventDefault();
-      this.props.browserHistory.push('/Home');
+      this.props.history.push('/Home');
     }
     
     render() {

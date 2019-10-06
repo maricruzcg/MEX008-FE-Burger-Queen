@@ -6,6 +6,7 @@
   "private": true,
   "homepage": "https://vianeylararangel.github.io/MEX008-FE-Burger-Queen/",
   "dependencies": {
+    "@version/react-router-v3": "^1.0.0",
     "bcryptjs": "^2.4.3",
     "bootstrap": "^4.3.1",
     "config": "^3.2.3",

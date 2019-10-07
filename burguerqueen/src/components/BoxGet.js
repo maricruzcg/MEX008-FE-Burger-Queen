@@ -1,8 +1,9 @@
   import React from 'react';
   import { withRouter } from 'react-router-dom';
-  import { Button } from 'reactstrap';
+  import { Button, CardImg } from 'reactstrap';
   
   import logo from '../imgFED/logo.png';
+  import arrow from '../assets/arrow.png';
 
   class BoxGet extends React.Component {
     handleClick(ev) {
@@ -60,7 +61,13 @@
                 </div>
               </div>
 
-              <button className={'btn-valid-password'} onClick={this.handleClick.bind(this)} >Flecha</button>
+              <button className={'btn-valid-password'} onClick={this.handleClick.bind(this)} >
+              <CardImg
+                        width= "12 px"
+                        src={arrow}
+                        alt="arrow"
+                      />
+              </button>
             </section>
           </section>
         </section>

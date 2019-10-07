@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch  } from 'react-router-dom';
 
 import Home from './Home';
 import Menu from './Menu';
@@ -12,8 +12,9 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <BrowserRouter>
+      <Router>
         <Switch>
+          {/* Ésta ruta funciona */}
           <Route exact path={process.env.PUBLIC_URL + '/'} component={GetIn} />
           <Route exact path={process.env.PUBLIC_URL + '/Home'} component={Home} />
           <Route exact path={process.env.PUBLIC_URL + '/Menu'} component={Menu} />
@@ -22,7 +23,7 @@ class App extends Component {
 
           <Route path={process.env.PUBLIC_URL + '*'} component={Error} />
         </Switch>
-      </BrowserRouter>
+      </Router>
     );
   }
 }

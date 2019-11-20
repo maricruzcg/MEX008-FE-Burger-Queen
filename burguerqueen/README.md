@@ -1,68 +1,46 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Preámbulo
 
-## Available Scripts
+Nos contactó una cadena de comida rápida vegana (Pan D’monium, ubicado en Av. Chilpancingo 129, colonia Roma Sur) para que contruyamos una interfaz para optimizar toma de pedidos y administración dentro de su local establecido.
 
-In the project directory, you can run:
+# Conocimiento del negocio
 
-### `npm start`
+Para conocer cómo se realizan los pedidos y las necesidades del personal para la atención de los comensales, acudimos a las instalaciones de Pan D'monium. Fuimos atendidas por Aurora, dueña del negocio, quien nos explicó las estaciones en que se divide el negocio. Nos habló de las dificultades para utilizar el software y las repercusiones en su trabajo.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![estaciones1](https://github.com/VianeyLaraRangel/MEX008-FE-Burger-Queen/blob/master/burguerqueen/img/estaciones11.png)
+![estaciones2](https://github.com/VianeyLaraRangel/MEX008-FE-Burger-Queen/blob/master/burguerqueen/img/estaciones22.png)
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+En Pan D'monium trabajan 5 personas trabajan en este local establecido, todas mayormente en la cocina, por lo que cuando entran comensales, una de ellas tiene que parar lo que está haciendo para ir a atender las mesas, para regresar con el pedido y seguir preparando la comida. No hay una persona enteramente dedicada a meserear. Descubrimos que tienen promoción de pizzas al 2x1 para los días miércoles y que tienen muchas visitas ese día de la semana.
 
-### `npm test`
+El menú de Pan D'moium ofrece 6 tipos de hamburguesas, 6 diferentes pizzas, con 3 tamaños (personal, mediana y familiar), así mismo 2 tipos de ensaladas, sodas italianas, malteadas y postres, pero no cuenta con opción en inglés.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Entrevista con Aurora
 
-### `npm run build`
+![aurora](https://github.com/VianeyLaraRangel/MEX008-FE-Burger-Queen/blob/master/burguerqueen/img/aurora1.png)
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Entendimiento del problema
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+El negocio usa desde hace 6 meses la aplicación iZettle, usan además una impresora para que las comandas lleguen a cada estación en la cocina, y una terminal para realizar los cobros con tarjeta.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+La aplicación le permite crear un mapa con la distribución real de las mesas del local, sin embargo, nos comenta esto le quita tiempo.
 
-### `npm run eject`
+El sistema le permite ingresar todas las opciones de su menú, tanto comida como bebidas, y una característica que le agrada es poder poner especificaciones en las comandas (productos sin algún condimento o pizzas con de dos estilos diferentes).
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Una vez que la orden está lista se manda a cocina y ahí se imprime la comanda, en caso de que la orden incluya productos de diferentes estaciones se imprime las veces que sean necesarias.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![izettle](https://github.com/VianeyLaraRangel/MEX008-FE-Burger-Queen/blob/master/burguerqueen/img/izettleok.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# Ideación
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+[Prototipo](https://www.figma.com/proto/qb7wqGipGcKK4CfeXtoUAj/Burger-Queen?node-id=0%3A1&scaling=scale-down)
 
-## Learn More
+Decidimos enfocarnos en el servicio al cliente, en el rol de la mesera y su interacción con los comensales. Para Aurora este punto es fundamental para su negocio porque este trato personalizado le creó clientes leales y frecuentes, que en este momento le comentan ya no se sienten tan acogidos y es algo que a ella le gustaría cambiar.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Por otro lado una mejora en el servicio de las meseras, supondría mayores propinas para todas, y es otro de los objetivos que se quiere alcanzar, una mayor entrada de dinero a partir de una mejora del servicio.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Para solucionar estos puntos, decidimos incluir en la primera pantalla que ve la mesera, tres recomendaciones que puede hacerle a los comensales estas se podrán modificar desde la cuenta de Administradora a la cual tendrán acceso solamente las stakeholders. 
 
-### Code Splitting
+Estas recomendaciones estarán ligadas al historial de ventas para que las stakeholders puedan reconocer que productos quizá no esté teniendo tantas ventas o sea nuevo para los comensales.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+En la pantalla se tendrá a la vista, todo el tiempo, el menú y la orden que se está modificando, así como las órdenes abiertas que ya se han mandado a cocina.
 
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+![pantallas](https://github.com/VianeyLaraRangel/MEX008-FE-Burger-Queen/blob/master/burguerqueen/img/pantallas1.png)
